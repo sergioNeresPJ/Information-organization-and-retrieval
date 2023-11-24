@@ -1,0 +1,68 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO cursos VALUES ('Data Visualization with Tableau', 'Mount Mary University (WI)', 'Melba Giacomo Adele', '20081107', 354, 6965.28);
+OK
+INSERT INTO cursos VALUES ('IBM Data Science Junior Certificate', 'Northwood University (MI)', 'Florentino Lawayne Sienna', '20200708', 64, 4963.47);
+OK
+INSERT INTO cursos VALUES ('Time Series I', 'University of British Columbia (None)', 'Patrik Maari', '20081017', 208, 1958.89);
+OK
+INSERT INTO cursos VALUES ('Time Series II', 'South College (TN)', 'Richardo Ikeem', '20130414', 55, 228.97);
+OK
+INSERT INTO cursos VALUES ('Business Statistics and Analysis', 'Metropolitan State University (MN)', 'Dong Tyne Arwa', '20111002', 1131, 6585.94);
+OK
+INSERT INTO cursos VALUES ('Android App Development with Java', 'University of Southern Indiana (IN)', 'Jaclin Hien Demarkus', '20210406', 792, 2441.35);
+OK
+INSERT INTO cursos VALUES ('Analysis of Algorithms', 'Suny Oswego (NY)', 'Millisa Lashunna Chontel', '20151209', 1110, 2340.01);
+OK
+INSERT INTO cursos VALUES ('Data Visualization with Python', 'Trinity Christian College (IL)', 'Leana Kandi Jeannett', '20030317', 479, 5378.58);
+OK
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Tarleton State University (TX)', 'Anja Vianney Christipher', '20120705', 1068, 9410.84);
+OK
+INSERT INTO cursos VALUES ('Web Design for Everybody', 'East Central University (OK)', 'Charlette Reena', '20080222', 1155, 4141.95);
+OK
+INSERT INTO cursos VALUES ('SAS Programming', 'Western State Colorado University (CO)', 'Demetria Bridgett', '20010803', 733, 4120.79);
+OK
+INSERT INTO cursos VALUES ('Android Development for Creative Entrepreneurs', 'Missouri State University (MO)', 'Davona Collis', '20131112', 865, 4732.71);
+OK
+INSERT INTO cursos VALUES ('Build a Modern Computer', 'Lubbock Christian University (TX)', 'Elio Kalliopi', '20151017', 638, 3283.52);
+OK
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'University of Puerto Rico Arecibo (PR)', 'Suraj Nikia', '20080225', 281, 8969.74);
+OK
+INSERT INTO cursos VALUES ('Fundamentals of Computing', 'Mary Baldwin College (VA)', 'Dave Lavonia', '20100517', 117, 4864.64);
+OK
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'Northwest Nazarene University (ID)', 'Chanse Jennier Asucena', '20210602', 466, 7643.51);
+ERRO: Ja existe um registro com a chave Hadoop Platform and Application Framework
+UPDATE cursos SET categorias = array_append(categorias, 'Tableau Software') WHERE titulo = 'Fundamentals of Computing';
+OK
+UPDATE cursos SET categorias = array_append(categorias, 'Product Design') WHERE titulo = 'Fundamentals of Computing';
+OK
+UPDATE cursos SET categorias = array_append(categorias, 'Data Visualization S') WHERE titulo = 'Hadoop Platform and Application Framework';
+OK
+UPDATE cursos SET categorias = array_append(categorias, 'Product Design') WHERE titulo = 'Survey Data Collection and Analytics';
+ERRO: Registro nao encontrado
+UPDATE cursos SET categorias = array_append(categorias, 'Material Handling') WHERE titulo = 'Build a Modern Computer';
+OK
+SELECT * FROM cursos WHERE 'Product Design' = ANY (categorias) ORDER BY id_curso ASC;
+Registros secundários percorridos: 2
+Registros primários percorridos: 1
+00000014, Fundamentals of Computing, Mary Baldwin College (VA), Dave Lavonia, 20100517, 117, 4864.64
+SELECT * FROM cursos WHERE 'Change Management' = ANY (categorias) ORDER BY id_curso ASC;
+Registros secundários percorridos: 2 1 0
+AVISO: Nenhum registro encontrado
+\echo file ARQUIVO_CURSOS
+00000000;Data Visualization with Tableau;Mount Mary University (WI);Melba Giacomo Adele;20081107;0354;0000006965.28;;###########################################################################################################################################00000001;IBM Data Science Junior Certificate;Northwood University (MI);Florentino Lawayne Sienna;20200708;0064;0000004963.47;;##################################################################################################################################00000002;Time Series I;University of British Columbia (None);Patrik Maari;20081017;0208;0000001958.89;;#########################################################################################################################################################00000003;Time Series II;South College (TN);Richardo Ikeem;20130414;0055;0000000228.97;;#########################################################################################################################################################################00000004;Business Statistics and Analysis;Metropolitan State University (MN);Dong Tyne Arwa;20111002;1131;0000006585.94;;#######################################################################################################################################00000005;Android App Development with Java;University of Southern Indiana (IN);Jaclin Hien Demarkus;20210406;0792;0000002441.35;;###############################################################################################################################00000006;Analysis of Algorithms;Suny Oswego (NY);Millisa Lashunna Chontel;20151209;1110;0000002340.01;;#########################################################################################################################################################00000007;Data Visualization with Python;Trinity Christian College (IL);Leana Kandi Jeannett;20030317;0479;0000005378.58;;#######################################################################################################################################00000008;iOS Development for Creative Entrepreneurs;Tarleton State University (TX);Anja Vianney Christipher;20120705;1068;0000009410.84;;#######################################################################################################################00000009;Web Design for Everybody;East Central University (OK);Charlette Reena;20080222;1155;0000004141.95;;####################################################################################################################################################00000010;SAS Programming;Western State Colorado University (CO);Demetria Bridgett;20010803;0733;0000004120.79;;#################################################################################################################################################00000011;Android Development for Creative Entrepreneurs;Missouri State University (MO);Davona Collis;20131112;0865;0000004732.71;;##############################################################################################################################00000012;Build a Modern Computer;Lubbock Christian University (TX);Elio Kalliopi;20151017;0638;0000003283.52;Material Handling;#################################################################################################################################00000013;Hadoop Platform and Application Framework;University of Puerto Rico Arecibo (PR);Suraj Nikia;20080225;0281;0000008969.74;Data Visualization S;#########################################################################################################00000014;Fundamentals of Computing;Mary Baldwin College (VA);Dave Lavonia;20100517;0117;0000004864.64;Tableau Software|Product Design;##########################################################################################################################
+\echo index cursos_idx
+001000000000000############T*********001000000020002############T*********001000000010001############F000001***001000000040004############T*********001000000060006############T*********001000000050005############F003004***001000000030003############F002005***001000000080008############T*********001000000100010############T*********001000000090009############F007008***001000000120012############T*********001000000140014############T*********001000000130013############F010011***001000000110011############F009012***001000000070007############F006013***
+\echo index titulo_idx
+001ANALYSIS OF ALGORITHMS#############################00000006###########################################################T*********002IOS DEVELOPMENT FOR CREATIVE ENTREPRENEURS#########00000008SAS PROGRAMMING####################################00000010T*********001ANDROID APP DEVELOPMENT WITH JAVA##################00000005###########################################################F000007***001DATA VISUALIZATION WITH PYTHON#####################00000007###########################################################T*********002TIME SERIES II#####################################00000003WEB DESIGN FOR EVERYBODY###########################00000009T*********001TIME SERIES I######################################00000002###########################################################F001004***002BUSINESS STATISTICS AND ANALYSIS###################00000004IBM DATA SCIENCE JUNIOR CERTIFICATE################00000001F002009005002ANDROID DEVELOPMENT FOR CREATIVE ENTREPRENEURS#####00000011BUILD A MODERN COMPUTER############################00000012T*********002FUNDAMENTALS OF COMPUTING##########################00000014HADOOP PLATFORM AND APPLICATION FRAMEWORK##########00000013T*********001DATA VISUALIZATION WITH TABLEAU####################00000000###########################################################F003008***
+\echo index data_curso_usuario_idx
+ERRO: Arquivo vazio
+\echo index categorias_primario_idx
+00000014-00100000014-00100000013-00100000012-001
+\echo index categorias_secundario_idx
+DATA VISUALIZATION S0002MATERIAL HANDLING###0003PRODUCT DESIGN######0001TABLEAU SOFTWARE####0000
+\q

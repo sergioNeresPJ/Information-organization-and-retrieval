@@ -1,0 +1,23 @@
+SET ARQUIVO_USUARIOS TO '74408638683;Chelsy Britany;jerrod27@hotmail.com;90939950984;0000042222.68;######################################################12728898844;Terril Judit Atom;arvel.pfeffer@macejkovic.info;***********;0000032877.31;##########################################68977208649;Cortnie Clover;vance86@considine.com;43247763200;0000074340.79;#####################################################';
+SET ARQUIVO_CURSOS TO '00000000;Introduction to Machine Learning;Baldwin Wallace University (OH);Tonie Shantel Jeramie;20120518;0876;0000008781.92;Computer Programming|Javascript|Statistical Visualiz|;##############################################################################00000001;Clinical Data Science;Hendrix College (AR);Thane Deisi;20211112;0412;0000001408.59;Microsoft Azure|SQL|Exploratory Data Ana|;##########################################################################################################################00000002;Object Oriented Java Programming;Buena Vista University (IA);Taj Catrena Kammy;20160818;0041;0000000923.39;Banking|Internet Of Things|Machine Learning Alg|;###########################################################################################';
+SET ARQUIVO_INSCRICOES TO '0000000068977208649200105110000I2011102623590000000012728898844201209051420C2014072815550000000274408638683200909031632A201702211749';
+INSERT INTO cursos VALUES ('Web Applications for Everybody', 'Central Christian College (KS)', 'Barbra Cutler', '20060610', 827, 1256.59);
+INSERT INTO cursos VALUES ('Cloud Computing', 'Minnesota State University Moorhead (MN)', 'Shajuan Alana Donavon', '20080919', 691, 2443.98);
+INSERT INTO cursos VALUES ('Java Programming and Software Engineering', 'WinstonSalem State University (NC)', 'Giang Marilu Cortland', '20040505', 192, 6819.69);
+INSERT INTO cursos VALUES ('Clinical Data Science', 'Seton Hill University (PA)', 'Rachele Bettina', '20211107', 1122, 6267.06);
+UPDATE cursos SET categorias = array_append(categorias, 'PostgreSQL') WHERE titulo = 'Web Applications for Everybody';
+UPDATE cursos SET categorias = array_append(categorias, 'User Experience') WHERE titulo = 'Java Programming and Software Engineering';
+UPDATE cursos SET categorias = array_append(categorias, 'Devops Tools') WHERE titulo = 'Cloud Computing';
+UPDATE cursos SET categorias = array_append(categorias, 'PostgreSQL') WHERE titulo = 'IBM Data Science Professional Certificate';
+UPDATE cursos SET categorias = array_append(categorias, 'Computational Thinki') WHERE titulo = 'Web Applications for Everybody';
+SELECT * FROM cursos WHERE 'PostgreSQL' = ANY (categorias) ORDER BY id_curso ASC;
+SELECT * FROM cursos WHERE 'Human Learning' = ANY (categorias) ORDER BY id_curso ASC;
+SELECT * FROM cursos WHERE 'Machine Learning' = ANY (categorias) ORDER BY id_curso ASC;
+\echo file ARQUIVO_CURSOS
+\echo file ARQUIVO_INSCRICOES
+\echo index cursos_idx
+\echo index titulo_idx
+\echo index data_curso_usuario_idx
+\echo index categorias_primario_idx
+\echo index categorias_secundario_idx
+\q

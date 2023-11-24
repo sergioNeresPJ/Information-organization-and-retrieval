@@ -1,0 +1,67 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO usuarios VALUES ('68110268504', 'Sindy Lakeshia Carolynn', 'lonzo78@hotmail.com', '42856766766');
+OK
+INSERT INTO usuarios VALUES ('54443017315', 'Olatokunbo Vincenzo', 'skiles.enola@sporer.org');
+OK
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+OK
+INSERT INTO usuarios VALUES ('84858786728', 'Gricelda Damarius Chalice', 'nasir.kilback@olson.com');
+ERRO: Ja existe um registro com a chave 84858786728
+INSERT INTO cursos VALUES ('Data Visualization with Tableau', 'Mount Mary University (WI)', 'Melba Giacomo Adele', '20081107', 354, 6965.28);
+OK
+INSERT INTO cursos VALUES ('IBM Data Science Professional Certificate', 'Northwood University (MI)', 'Florentino Lawayne Sienna', '20200708', 64, 4963.47);
+OK
+INSERT INTO cursos VALUES ('Practical Time Series Analysis', 'University of British Columbia (None)', 'Patrik Maari', '20081017', 208, 1958.89);
+OK
+INSERT INTO cursos VALUES ('Practical Time Series Analysis', 'South College (TN)', 'Richardo Ikeem', '20130414', 55, 228.97);
+ERRO: Ja existe um registro com a chave Practical Time Series Analysis
+SELECT * FROM usuarios WHERE id_usuario = '54443017315';
+Registros percorridos: 3 1 2
+54443017315, Olatokunbo Vincenzo, skiles.enola@sporer.org, ***********, 0.00
+SELECT * FROM usuarios WHERE id_usuario = '45143117149';
+Registros percorridos: 3 1 2
+ERRO: Registro nao encontrado
+SELECT * FROM cursos WHERE id_curso = '00000004';
+Registros percorridos: 3 5 4
+00000004, IBM Data Science Professional Certificate, Northwood University (MI), Florentino Lawayne Sienna, 20200708, 64, 4963.47
+SELECT * FROM cursos WHERE id_curso = '00000028';
+Registros percorridos: 3 5
+ERRO: Registro nao encontrado
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+10406065934, Eyad Chandra, abdul.lebsack@schulist.com, ***********, 0.00
+34563448990, Shericka Silbia, cbrown@becker.com, 59105966110, 88700.51
+54443017315, Olatokunbo Vincenzo, skiles.enola@sporer.org, ***********, 0.00
+68110268504, Sindy Lakeshia Carolynn, lonzo78@hotmail.com, 42856766766, 0.00
+76069720480, Falisha Khristine Sergio, hfritsch@fahey.biz, 72595351192, 86030.47
+84858786728, Zack Whitnee, marvin.haleigh@beatty.net, ***********, 36247.52
+\echo file ARQUIVO_USUARIOS
+76069720480;Falisha Khristine Sergio;hfritsch@fahey.biz;72595351192;0000086030.47;##############################################34563448990;Shericka Silbia;cbrown@becker.com;59105966110;0000088700.51;########################################################84858786728;Zack Whitnee;marvin.haleigh@beatty.net;***********;0000036247.52;###################################################68110268504;Sindy Lakeshia Carolynn;lonzo78@hotmail.com;42856766766;0000000000.00;##############################################54443017315;Olatokunbo Vincenzo;skiles.enola@sporer.org;***********;0000000000.00;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################
+\echo index usuarios_idx
+10406065934, 5
+34563448990, 1
+54443017315, 4
+68110268504, 3
+76069720480, 0
+84858786728, 2
+\echo file ARQUIVO_CURSOS
+00000000;Data Analysis and Interpretation;Benjamin Franklin Institute of Technology (MA);Sanika Alexandros;20090601;0818;0000003761.84;Computer Graphics|Data Warehousing|Database Administrat|;################################################################00000001;Game Design and Development;Chowan University (NC);Deonna Jacie Taleisha;20180711;0494;0000001732.66;Management Accountin|Human Learning|Securities Sales|;############################################################################################00000002;iOS Development for Creative Entrepreneurs;Georgia Gwinnett College (GA);Cerita Johanna;20061010;0315;0000008619.31;Basic Descriptive|Conflict Management|Marketing Management|;#######################################################################00000003;Data Visualization with Tableau;Mount Mary University (WI);Melba Giacomo Adele;20081107;0354;0000006965.28;;###########################################################################################################################################00000004;IBM Data Science Professional Certificate;Northwood University (MI);Florentino Lawayne Sienna;20200708;0064;0000004963.47;;############################################################################################################################00000005;Practical Time Series Analysis;University of British Columbia (None);Patrik Maari;20081017;0208;0000001958.89;;########################################################################################################################################
+\echo index cursos_idx
+00000000, 0
+00000001, 1
+00000002, 2
+00000003, 3
+00000004, 4
+00000005, 5
+\echo index titulo_idx
+DATA ANALYSIS AND INTERPRETATION, 00000000
+DATA VISUALIZATION WITH TABLEAU, 00000003
+GAME DESIGN AND DEVELOPMENT, 00000001
+IBM DATA SCIENCE PROFESSIONAL CERTIFICATE, 00000004
+IOS DEVELOPMENT FOR CREATIVE ENTREPRENEURS, 00000002
+PRACTICAL TIME SERIES ANALYSIS, 00000005
+\q

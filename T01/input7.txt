@@ -1,0 +1,33 @@
+INSERT INTO usuarios VALUES ('43953000569', 'Allan Rush', 'qabshire@gmail.com');
+INSERT INTO usuarios VALUES ('89226775363', 'Yuko Gerado', 'dietrich.kole@tremblay.com', '76328300213');
+INSERT INTO usuarios VALUES ('85040987847', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+INSERT INTO usuarios VALUES ('43953000569', 'Shanne Kalinda Janee', 'jordi81@hotmail.com', '82027125163');
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Tarleton State University (TX)', 'Anja Vianney Christipher', '20120705', 1068, 9410.84);
+INSERT INTO cursos VALUES ('Web Design for Everybody', 'East Central University (OK)', 'Charlette Reena', '20080222', 1155, 4141.95);
+INSERT INTO cursos VALUES ('SAS Programming', 'Western State Colorado University (CO)', 'Demetria Bridgett', '20010803', 733, 4120.79);
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Missouri State University (MO)', 'Davona Collis', '20131112', 865, 4732.71);
+UPDATE usuarios SET saldo = saldo + 7155 WHERE id_usuario = '85040987847';
+UPDATE usuarios SET saldo = saldo + 5305 WHERE id_usuario = '82084421484';
+UPDATE usuarios SET saldo = saldo + -3190 WHERE id_usuario = '43953000569';
+INSERT INTO inscricoes VALUES('00000000', '85040987847');
+UPDATE usuarios SET saldo = saldo + 9159 WHERE id_usuario = '85040987847';
+INSERT INTO inscricoes VALUES('00000000', '85040987847');
+INSERT INTO inscricoes VALUES('00000002', '85040987847');
+INSERT INTO inscricoes VALUES('00000002', '85040987847');
+INSERT INTO inscricoes VALUES('00000001', '85040987847');
+INSERT INTO inscricoes VALUES('00000001', '54202969607');
+INSERT INTO inscricoes VALUES('00000015', '89226775363');
+INSERT INTO inscricoes VALUES('00000002', '82084421484');
+SELECT * FROM cursos WHERE titulo = 'SAS Programming';
+SELECT * FROM cursos WHERE titulo = 'Approximation Algorithms Part II';
+SELECT * FROM inscricoes WHERE data_inscricao BETWEEN '200811210000' AND '202210252359' ORDER BY data_inscricao ASC;
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\echo file ARQUIVO_INSCRICOES
+\echo index inscricoes_idx
+\echo index data_curso_usuario_idx
+\q

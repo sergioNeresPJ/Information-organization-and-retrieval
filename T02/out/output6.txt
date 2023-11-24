@@ -1,0 +1,111 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO usuarios VALUES ('20368885238', 'Joyce Jaclynn Qiana', 'lillie.reichel@ortiz.info');
+OK
+INSERT INTO usuarios VALUES ('36375564315', 'Daymond Destinee', 'kris.kreiger@hotmail.com');
+OK
+INSERT INTO usuarios VALUES ('59237878572', 'Kalyn Jai', 'walker.zelma@yahoo.com', '99777829366');
+OK
+INSERT INTO usuarios VALUES ('46916935965', 'Michaelvincent Metta', 'dayana.schuppe@medhurst.biz', '89849690999');
+OK
+INSERT INTO usuarios VALUES ('38747428789', 'Phoebe Edwin', 'rosemary03@hotmail.com');
+OK
+INSERT INTO usuarios VALUES ('42714376303', 'Adama Lanessa', 'nicolas.steuber@hilpert.biz', '20660504344');
+OK
+INSERT INTO usuarios VALUES ('68110268504', 'Sindy Lakeshia Carolynn', 'lonzo78@hotmail.com', '42856766766');
+OK
+INSERT INTO usuarios VALUES ('54443017315', 'Olatokunbo Vincenzo', 'skiles.enola@sporer.org');
+OK
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+OK
+INSERT INTO usuarios VALUES ('20368885238', 'Alethea Mirza Teriann', 'qkertzmann@hotmail.com', '42376879816');
+ERRO: Ja existe um registro com a chave 20368885238
+INSERT INTO cursos VALUES ('Business Statistics and Analysis', 'Metropolitan State University (MN)', 'Dong Tyne Arwa', '20111002', 1131, 6585.94);
+OK
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'University of Southern Indiana (IN)', 'Jaclin Hien Demarkus', '20210406', 792, 2441.35);
+OK
+INSERT INTO cursos VALUES ('Analysis of Algorithms', 'SUNY Oswego (NY)', 'Millisa Lashunna Chontel', '20151209', 1110, 2340.01);
+OK
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Trinity Christian College (IL)', 'Leana Kandi Jeannett', '20030317', 479, 5378.58);
+ERRO: Ja existe um registro com a chave iOS App Development with Swift
+INSERT INTO cursos VALUES ('Fundamentals of Computing', 'Mary Baldwin College (VA)', 'Dave Lavonia', '20100517', 117, 4864.64);
+OK
+INSERT INTO cursos VALUES ('Databases', 'Northwest Nazarene University (ID)', 'Chanse Jennier Asucena', '20210602', 466, 7643.51);
+OK
+INSERT INTO cursos VALUES ('Web Applications with Java', 'Central Christian College (KS)', 'Barbra Cutler', '20060610', 827, 1256.59);
+OK
+INSERT INTO cursos VALUES ('Cloud Computing', 'Minnesota State University Moorhead (MN)', 'Shajuan Alana Donavon', '20080919', 691, 2443.98);
+OK
+INSERT INTO cursos VALUES ('Java Programming and Software Engineering', 'WinstonSalem State University (NC)', 'Giang Marilu Cortland', '20040505', 192, 6819.69);
+OK
+UPDATE usuarios SET saldo = saldo + 9146 WHERE id_usuario = '36375564315';
+OK
+UPDATE usuarios SET saldo = saldo + 3231 WHERE id_usuario = '17288459345';
+ERRO: Registro nao encontrado
+UPDATE usuarios SET saldo = saldo + -4830 WHERE id_usuario = '36375564315';
+ERRO: Valor invalido
+UPDATE usuarios SET saldo = saldo + 4830 WHERE id_usuario = '36375564315';
+OK
+INSERT INTO inscricoes VALUES('00000000', '36375564315');
+OK
+INSERT INTO inscricoes VALUES('00000001', '36375564315');
+OK
+INSERT INTO inscricoes VALUES('00000002', '36375564315');
+OK
+INSERT INTO inscricoes VALUES('00000000', '36375564315');
+ERRO: Ja existe um registro com a chave 0000000036375564315
+INSERT INTO inscricoes VALUES('00000002', '46916935965');
+ERRO: Saldo insuficiente
+INSERT INTO inscricoes VALUES('00000000', '57003066167');
+ERRO: Registro nao encontrado
+INSERT INTO inscricoes VALUES('00000046', '20368885238');
+ERRO: Registro nao encontrado
+INSERT INTO inscricoes VALUES('00000001', '59237878572');
+ERRO: Saldo insuficiente
+INSERT INTO inscricoes VALUES('00000008', '10406065934');
+ERRO: Registro nao encontrado
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+10406065934, Eyad Chandra, abdul.lebsack@schulist.com, ***********, 0.00
+20368885238, Joyce Jaclynn Qiana, lillie.reichel@ortiz.info, ***********, 0.00
+36375564315, Daymond Destinee, kris.kreiger@hotmail.com, ***********, 2608.70
+38747428789, Phoebe Edwin, rosemary03@hotmail.com, ***********, 0.00
+42714376303, Adama Lanessa, nicolas.steuber@hilpert.biz, 20660504344, 0.00
+46916935965, Michaelvincent Metta, dayana.schuppe@medhurst.biz, 89849690999, 0.00
+54443017315, Olatokunbo Vincenzo, skiles.enola@sporer.org, ***********, 0.00
+59237878572, Kalyn Jai, walker.zelma@yahoo.com, 99777829366, 0.00
+68110268504, Sindy Lakeshia Carolynn, lonzo78@hotmail.com, 42856766766, 0.00
+\echo file ARQUIVO_USUARIOS
+20368885238;Joyce Jaclynn Qiana;lillie.reichel@ortiz.info;***********;0000000000.00;############################################36375564315;Daymond Destinee;kris.kreiger@hotmail.com;***********;0000002608.70;################################################59237878572;Kalyn Jai;walker.zelma@yahoo.com;99777829366;0000000000.00;#########################################################46916935965;Michaelvincent Metta;dayana.schuppe@medhurst.biz;89849690999;0000000000.00;#########################################38747428789;Phoebe Edwin;rosemary03@hotmail.com;***********;0000000000.00;######################################################42714376303;Adama Lanessa;nicolas.steuber@hilpert.biz;20660504344;0000000000.00;################################################68110268504;Sindy Lakeshia Carolynn;lonzo78@hotmail.com;42856766766;0000000000.00;##############################################54443017315;Olatokunbo Vincenzo;skiles.enola@sporer.org;***********;0000000000.00;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################
+\echo index usuarios_idx
+003104060659340008203688852380000363755643150001T************003544430173150007592378785720002681102685040006T************002387474287890004469169359650003###############F000003001***001427143763030005##############################T************
+\echo file ARQUIVO_CURSOS
+00000000;Business Statistics and Analysis;Metropolitan State University (MN);Dong Tyne Arwa;20111002;1131;0000006585.94;;#######################################################################################################################################00000001;iOS App Development with Swift;University of Southern Indiana (IN);Jaclin Hien Demarkus;20210406;0792;0000002441.35;;##################################################################################################################################00000002;Analysis of Algorithms;SUNY Oswego (NY);Millisa Lashunna Chontel;20151209;1110;0000002340.01;;#########################################################################################################################################################00000003;Fundamentals of Computing;Mary Baldwin College (VA);Dave Lavonia;20100517;0117;0000004864.64;;#########################################################################################################################################################00000004;Databases;Northwest Nazarene University (ID);Chanse Jennier Asucena;20210602;0466;0000007643.51;;######################################################################################################################################################00000005;Web Applications with Java;Central Christian College (KS);Barbra Cutler;20060610;0827;0000001256.59;;##################################################################################################################################################00000006;Cloud Computing;Minnesota State University Moorhead (MN);Shajuan Alana Donavon;20080919;0691;0000002443.98;;###########################################################################################################################################00000007;Java Programming and Software Engineering;WinstonSalem State University (NC);Giang Marilu Cortland;20040505;0192;0000006819.69;;#######################################################################################################################
+\echo index cursos_idx
+002000000000000000000010001############T************002000000030003000000040004############T************002000000020002000000050005############F000001003***002000000060006000000070007############T************
+\echo index titulo_idx
+002ANALYSIS OF ALGORITHMS#############################00000002BUSINESS STATISTICS AND ANALYSIS###################00000000###########################################################T************003IOS APP DEVELOPMENT WITH SWIFT#####################00000001JAVA PROGRAMMING AND SOFTWARE ENGINEERING##########00000007WEB APPLICATIONS WITH JAVA#########################00000005T************002CLOUD COMPUTING####################################00000006FUNDAMENTALS OF COMPUTING##########################00000003###########################################################F000003001***001DATABASES##########################################00000004######################################################################################################################T************
+\echo file ARQUIVO_INSCRICOES
+0000000036375564315202107300733A2021073007330000000136375564315202108050218A2021080502180000000236375564315202108071953A202108071953
+\echo index inscricoes_idx
+003000000003637556431500000000000136375564315000100000002363755643150002T************
+DELETE FROM usuarios WHERE id_usuario = '59237878572';
+OK
+DELETE FROM usuarios WHERE id_usuario = '68110268504';
+OK
+DELETE FROM usuarios WHERE id_usuario = '20368885238';
+OK
+\echo file ARQUIVO_USUARIOS
+*|368885238;Joyce Jaclynn Qiana;lillie.reichel@ortiz.info;***********;0000000000.00;############################################36375564315;Daymond Destinee;kris.kreiger@hotmail.com;***********;0000002608.70;################################################*|237878572;Kalyn Jai;walker.zelma@yahoo.com;99777829366;0000000000.00;#########################################################46916935965;Michaelvincent Metta;dayana.schuppe@medhurst.biz;89849690999;0000000000.00;#########################################38747428789;Phoebe Edwin;rosemary03@hotmail.com;***********;0000000000.00;######################################################42714376303;Adama Lanessa;nicolas.steuber@hilpert.biz;20660504344;0000000000.00;################################################*|110268504;Sindy Lakeshia Carolynn;lonzo78@hotmail.com;42856766766;0000000000.00;##############################################54443017315;Olatokunbo Vincenzo;skiles.enola@sporer.org;***********;0000000000.00;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################
+\echo index usuarios_idx
+002104060659340008363755643150001###############T************001544430173150007##############################T************002387474287890004469169359650003###############F000003001***001427143763030005##############################T************
+VACUUM usuarios;
+OK
+\echo file ARQUIVO_USUARIOS
+36375564315;Daymond Destinee;kris.kreiger@hotmail.com;***********;0000002608.70;################################################46916935965;Michaelvincent Metta;dayana.schuppe@medhurst.biz;89849690999;0000000000.00;#########################################38747428789;Phoebe Edwin;rosemary03@hotmail.com;***********;0000000000.00;######################################################42714376303;Adama Lanessa;nicolas.steuber@hilpert.biz;20660504344;0000000000.00;################################################54443017315;Olatokunbo Vincenzo;skiles.enola@sporer.org;***********;0000000000.00;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################
+\echo index usuarios_idx
+003104060659340005363755643150000387474287890002T************002469169359650001544430173150004###############T************001427143763030003##############################F000001******
+\q

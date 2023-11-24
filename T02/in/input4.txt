@@ -1,0 +1,38 @@
+SET BTREE_ORDER 4;
+SET ARQUIVO_USUARIOS TO '66679595970;Verlon Calisha;kerluke.cole@rempel.org;***********;0000034305.09;###################################################42714376303;Sanaz Hans;rbednar@hotmail.com;95401672648;0000048561.28;###########################################################65037521605;Laith Vanesha Julie;tkovacek@lemke.com;82272144761;0000080153.86;###################################################';
+INSERT INTO usuarios VALUES ('58737564702', 'Karren Latecia Rochele', 'dickens.magdalena@yahoo.com', '66605657664');
+INSERT INTO usuarios VALUES ('46916935965', 'Michaelvincent Metta', 'dayana.schuppe@medhurst.biz', '89849690999');
+INSERT INTO usuarios VALUES ('38747428789', 'Phoebe Edwin', 'rosemary03@hotmail.com');
+INSERT INTO usuarios VALUES ('68110268504', 'Sindy Lakeshia Carolynn', 'lonzo78@hotmail.com', '42856766766');
+INSERT INTO usuarios VALUES ('54443017315', 'Olatokunbo Vincenzo', 'skiles.enola@sporer.org');
+INSERT INTO usuarios VALUES ('42714376303', 'Adama Lanessa', 'nicolas.steuber@hilpert.biz', '20660504344');
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+INSERT INTO usuarios VALUES ('84858786728', 'Gricelda Damarius Chalice', 'nasir.kilback@olson.com');
+UPDATE usuarios SET saldo = saldo + 5894 WHERE id_usuario = '65037521605';
+UPDATE usuarios SET saldo = saldo + 9772 WHERE id_usuario = '47922650827';
+UPDATE usuarios SET saldo = saldo + -3228 WHERE id_usuario = '58737564702';
+\echo file ARQUIVO_USUARIOS
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo index usuarios_idx
+DELETE FROM usuarios WHERE id_usuario = '66679595970';
+DELETE FROM usuarios WHERE id_usuario = '94524319844';
+DELETE FROM usuarios WHERE id_usuario = '65037521605';
+DELETE FROM usuarios WHERE id_usuario = '94524319844';
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+DELETE FROM usuarios WHERE id_usuario = '10406065934';
+DELETE FROM usuarios WHERE id_usuario = '38747428789';
+DELETE FROM usuarios WHERE id_usuario = '42714376303';
+DELETE FROM usuarios WHERE id_usuario = '46916935965';
+DELETE FROM usuarios WHERE id_usuario = '54443017315';
+DELETE FROM usuarios WHERE id_usuario = '58737564702';
+DELETE FROM usuarios WHERE id_usuario = '65037521605';
+DELETE FROM usuarios WHERE id_usuario = '66679595970';
+DELETE FROM usuarios WHERE id_usuario = '68110268504';
+DELETE FROM usuarios WHERE id_usuario = '84858786728';
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+VACUUM usuarios;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\q

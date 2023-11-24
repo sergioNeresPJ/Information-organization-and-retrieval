@@ -1,0 +1,18 @@
+INSERT INTO cursos VALUES ('Build a Modern Computer', 'Lubbock Christian University (TX)', 'Elio Kalliopi', '20151017', 638, 3283.52);
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'University of Puerto Rico Arecibo (PR)', 'Suraj Nikia', '20080225', 281, 8969.74);
+INSERT INTO cursos VALUES ('Fundamentals of Computing', 'Mary Baldwin College (VA)', 'Dave Lavonia', '20100517', 117, 4864.64);
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'Northwest Nazarene University (ID)', 'Chanse Jennier Asucena', '20210602', 466, 7643.51);
+UPDATE cursos SET categorias = array_append(categorias, 'Tableau Software') WHERE titulo = 'Fundamentals of Computing';
+UPDATE cursos SET categorias = array_append(categorias, 'Product Design') WHERE titulo = 'Fundamentals of Computing';
+UPDATE cursos SET categorias = array_append(categorias, 'Data Visualization S') WHERE titulo = 'Hadoop Platform and Application Framework';
+UPDATE cursos SET categorias = array_append(categorias, 'Product Design') WHERE titulo = 'Survey Data Collection and Analytics';
+UPDATE cursos SET categorias = array_append(categorias, 'Material Handling') WHERE titulo = 'Build a Modern Computer';
+SELECT * FROM cursos WHERE 'Product Design' = ANY (categorias) ORDER BY id_curso ASC;
+SELECT * FROM cursos WHERE 'Change Management' = ANY (categorias) ORDER BY id_curso ASC;
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\echo index data_curso_usuario_idx
+\echo index categorias_primario_idx
+\echo index categorias_secundario_idx
+\q

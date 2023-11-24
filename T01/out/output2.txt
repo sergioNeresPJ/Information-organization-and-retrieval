@@ -1,0 +1,47 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO usuarios VALUES ('81099655877', 'Valisha Dantae Omaira', 'alba68@yahoo.com', '11963648447');
+OK
+INSERT INTO usuarios VALUES ('27326510707', 'Rayshawn Fredie Devone', 'eulah.baumbach@gottlieb.info', '41353330791');
+OK
+INSERT INTO usuarios VALUES ('72176828461', 'Fabian Polly Kashawna', 'kasey28@yahoo.com', '61092116490');
+OK
+INSERT INTO usuarios VALUES ('72176828461', 'Kaprice Otisha Kellianne', 'miracle.reynolds@gmail.com', '45632620898');
+ERRO: Ja existe um registro com a chave 72176828461
+UPDATE usuarios SET telefone = '30172008115' WHERE id_usuario = '72176828461';
+OK
+UPDATE usuarios SET telefone = '92579378563' WHERE id_usuario = '96979297634';
+ERRO: Registro nao encontrado
+INSERT INTO cursos VALUES ('Executive Data Science', 'Whitman College (WA)', 'Kassondra Wilhelmina Dainelle', '20140202', 1190, 7719.6);
+OK
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Taylor University (IN)', 'Laquasha Lorine', '20060513', 300, 6521.96);
+OK
+INSERT INTO cursos VALUES ('IBM Data Science Professional Certificate', 'Bates College (ME)', 'Lindsee Yukari Eddrick', '20040215', 584, 6436.18);
+OK
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Burlington College (VT)', 'Allison Dirk', '20110419', 81, 3522.32);
+ERRO: Ja existe um registro com a chave iOS App Development with Swift
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+27326510707, Rayshawn Fredie Devone, eulah.baumbach@gottlieb.info, 41353330791, 0.00
+72176828461, Fabian Polly Kashawna, kasey28@yahoo.com, 30172008115, 0.00
+81099655877, Valisha Dantae Omaira, alba68@yahoo.com, 11963648447, 0.00
+\echo file ARQUIVO_USUARIOS
+81099655877;Valisha Dantae Omaira;alba68@yahoo.com;11963648447;0000000000.00;###################################################27326510707;Rayshawn Fredie Devone;eulah.baumbach@gottlieb.info;41353330791;0000000000.00;######################################72176828461;Fabian Polly Kashawna;kasey28@yahoo.com;30172008115;0000000000.00;##################################################
+\echo index usuarios_idx
+27326510707, 1
+72176828461, 2
+81099655877, 0
+\echo file ARQUIVO_CURSOS
+00000000;Executive Data Science;Whitman College (WA);Kassondra Wilhelmina Dainelle;20140202;1190;0000007719.60;;################################################################################################################################################00000001;iOS App Development with Swift;Taylor University (IN);Laquasha Lorine;20060513;0300;0000006521.96;;####################################################################################################################################################00000002;IBM Data Science Professional Certificate;Bates College (ME);Lindsee Yukari Eddrick;20040215;0584;0000006436.18;;######################################################################################################################################
+\echo index cursos_idx
+00000000, 0
+00000001, 1
+00000002, 2
+\echo index titulo_idx
+EXECUTIVE DATA SCIENCE, 00000000
+IBM DATA SCIENCE PROFESSIONAL CERTIFICATE, 00000002
+IOS APP DEVELOPMENT WITH SWIFT, 00000001
+\q

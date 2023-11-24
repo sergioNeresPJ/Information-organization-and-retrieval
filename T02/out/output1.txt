@@ -1,0 +1,32 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO usuarios VALUES ('24307783145', 'Yael Naeem Alphonso', 'cbahringer@stark.com');
+OK
+INSERT INTO usuarios VALUES ('68879111793', 'Genice Adriano Eladio', 'kristian.harris@gmail.com');
+OK
+INSERT INTO usuarios VALUES ('85326069057', 'Scarlet Rolly Shontae', 'florencio.kirlin@yahoo.com','42307783144');
+OK
+INSERT INTO usuarios VALUES ('72176828461', 'Fabian Polly Kashawna', 'kasey28@yahoo.com', '61092116490');
+OK
+INSERT INTO usuarios VALUES ('24307783145', 'Kiirsten Johnnetta', 'gleason@farrell.org', '39035733261');
+ERRO: Ja existe um registro com a chave 24307783145
+UPDATE usuarios SET saldo = saldo + 5493 WHERE id_usuario = '68879111793';
+OK
+UPDATE usuarios SET saldo = saldo + 7093 WHERE id_usuario = '53871682559';
+ERRO: Registro nao encontrado
+UPDATE usuarios SET saldo = saldo + -6443 WHERE id_usuario = '68879111793';
+ERRO: Valor invalido
+\echo file ARQUIVO_USUARIOS
+24307783145;Yael Naeem Alphonso;cbahringer@stark.com;***********;0000000000.00;#################################################68879111793;Genice Adriano Eladio;kristian.harris@gmail.com;***********;0000005493.00;##########################################85326069057;Scarlet Rolly Shontae;florencio.kirlin@yahoo.com;42307783144;0000000000.00;#########################################72176828461;Fabian Polly Kashawna;kasey28@yahoo.com;61092116490;0000000000.00;##################################################
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+24307783145, Yael Naeem Alphonso, cbahringer@stark.com, ***********, 0.00
+68879111793, Genice Adriano Eladio, kristian.harris@gmail.com, ***********, 5493.00
+72176828461, Fabian Polly Kashawna, kasey28@yahoo.com, 61092116490, 0.00
+85326069057, Scarlet Rolly Shontae, florencio.kirlin@yahoo.com, 42307783144, 0.00
+\echo index usuarios_idx
+001243077831450000###############T*********002721768284610003853260690570002T*********001688791117930001###############F000001***
+\q

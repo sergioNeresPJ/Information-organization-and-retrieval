@@ -1,0 +1,55 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO usuarios VALUES ('93804621236', 'Keneta Jerri Ellana', 'vallie23@yahoo.com', '24572538506');
+OK
+INSERT INTO usuarios VALUES ('57653993524', 'Charnee Kaily', 'camren59@roob.com', '86294148423');
+OK
+INSERT INTO usuarios VALUES ('59932519774', 'Mckinzie Shanisha Destiny', 'clay.schulist@emmerich.com');
+OK
+INSERT INTO usuarios VALUES ('93804621236', 'Gautam Wayne', 'pauline56@homenick.com', '51050580158');
+ERRO: Ja existe um registro com a chave 93804621236
+INSERT INTO cursos VALUES ('Information Visualization', 'University of South Florida St Petersburg (FL)', 'Lor Jasmina Braden', '20210408', 1080, 2418.36);
+OK
+INSERT INTO cursos VALUES ('Machine Learning with TensorFlow', 'Lindsey Wilson College (KY)', 'Elly Chery', '20021014', 732, 6360.85);
+OK
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Rhode Island School of Design (RI)', 'Brandyn Desaray Neomi', '20080305', 809, 6962.94);
+OK
+INSERT INTO cursos VALUES ('Machine Learning with TensorFlow', 'Wilmington College (OH)', 'Timeka Elanda', '20090304', 832, 6794.93);
+ERRO: Ja existe um registro com a chave Machine Learning with TensorFlow
+SELECT * FROM usuarios WHERE id_usuario = '57653993524';
+Registros percorridos: 1 0
+57653993524, Charnee Kaily, camren59@roob.com, 86294148423, 0.00
+SELECT * FROM usuarios WHERE id_usuario = '72428989929';
+Registros percorridos: 1 2
+ERRO: Registro nao encontrado
+SELECT * FROM cursos WHERE id_curso = '00000001';
+Registros percorridos: 1
+00000001, Machine Learning with TensorFlow, Lindsey Wilson College (KY), Elly Chery, 20021014, 732, 6360.85
+SELECT * FROM cursos WHERE id_curso = '00000007';
+Registros percorridos: 1 2
+ERRO: Registro nao encontrado
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+57653993524, Charnee Kaily, camren59@roob.com, 86294148423, 0.00
+59932519774, Mckinzie Shanisha Destiny, clay.schulist@emmerich.com, ***********, 0.00
+93804621236, Keneta Jerri Ellana, vallie23@yahoo.com, 24572538506, 0.00
+\echo file ARQUIVO_USUARIOS
+93804621236;Keneta Jerri Ellana;vallie23@yahoo.com;24572538506;0000000000.00;###################################################57653993524;Charnee Kaily;camren59@roob.com;86294148423;0000000000.00;##########################################################59932519774;Mckinzie Shanisha Destiny;clay.schulist@emmerich.com;***********;0000000000.00;#####################################
+\echo index usuarios_idx
+57653993524, 1
+59932519774, 2
+93804621236, 0
+\echo file ARQUIVO_CURSOS
+00000000;Information Visualization;University of South Florida St Petersburg (FL);Lor Jasmina Braden;20210408;1080;0000002418.36;;##############################################################################################################################00000001;Machine Learning with TensorFlow;Lindsey Wilson College (KY);Elly Chery;20021014;0732;0000006360.85;;##################################################################################################################################################00000002;iOS App Development with Swift;Rhode Island School of Design (RI);Brandyn Desaray Neomi;20080305;0809;0000006962.94;;##################################################################################################################################
+\echo index cursos_idx
+00000000, 0
+00000001, 1
+00000002, 2
+\echo index titulo_idx
+INFORMATION VISUALIZATION, 00000000
+IOS APP DEVELOPMENT WITH SWIFT, 00000002
+MACHINE LEARNING WITH TENSORFLOW, 00000001
+\q

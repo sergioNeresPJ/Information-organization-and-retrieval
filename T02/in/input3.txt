@@ -1,0 +1,25 @@
+INSERT INTO usuarios VALUES ('93804621236', 'Keneta Jerri Ellana', 'vallie23@yahoo.com', '24572538506');
+INSERT INTO usuarios VALUES ('57653993524', 'Charnee Kaily', 'camren59@roob.com', '86294148423');
+INSERT INTO usuarios VALUES ('59932519774', 'Mckinzie Shanisha Destiny', 'clay.schulist@emmerich.com');
+INSERT INTO usuarios VALUES ('93804621236', 'Gautam Wayne', 'pauline56@homenick.com', '51050580158');
+INSERT INTO usuarios VALUES ('85040987847', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+INSERT INTO usuarios VALUES ('99953000000', 'Shanne Kalinda Janee', 'jordi81@hotmail.com', '82027125163');
+INSERT INTO usuarios VALUES ('99804621236', 'Gautam Wayne', 'pauline56@homenick.com', '51050580158');
+INSERT INTO cursos VALUES ('Information Visualization', 'University of South Florida St Petersburg (FL)', 'Lor Jasmina Braden', '20210408', 1080, 2418.36);
+INSERT INTO cursos VALUES ('Machine Learning with TensorFlow', 'Lindsey Wilson College (KY)', 'Elly Chery', '20021014', 732, 6360.85);
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Rhode Island School of Design (RI)', 'Brandyn Desaray Neomi', '20080305', 809, 6962.94);
+INSERT INTO cursos VALUES ('IBM Data Science Junior Certificate', 'Northwood University (MI)', 'Florentino Lawayne Sienna', '20200708', 64, 4963.47);
+INSERT INTO cursos VALUES ('Time Series I', 'University of British Columbia (None)', 'Patrik Maari', '20081017', 208, 1958.89);
+INSERT INTO cursos VALUES ('Time Series II', 'South College (TN)', 'Richardo Ikeem', '20130414', 55, 228.97);
+INSERT INTO cursos VALUES ('Machine Learning with TensorFlow', 'Wilmington College (OH)', 'Timeka Elanda', '20090304', 832, 6794.93);
+SELECT * FROM usuarios WHERE id_usuario = '57653993524';
+SELECT * FROM usuarios WHERE id_usuario = '72428989929';
+SELECT * FROM cursos WHERE id_curso = '00000001';
+SELECT * FROM cursos WHERE id_curso = '00000007';
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\q

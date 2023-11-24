@@ -1,0 +1,39 @@
+SET BTREE_ORDER 4;
+SET ARQUIVO_USUARIOS TO '11130528751;Aviance Kaneshia;maryam30@yahoo.com;***********;0000058797.82;######################################################68182492966;Virgilio Aixa Silviano;mschaden@hotmail.com;***********;0000097910.54;##############################################93783219065;Shannice Shelbey;gracie27@gmail.com;96892923607;0000020652.41;######################################################';
+SET ARQUIVO_CURSOS TO '00000000;Machine Learning;Rosalind Franklin University of Medicine and Scienc;Lizzete Osmar;20210823;1052;0000009195.65;Data Model|Applied Machine Lear|Business Communicati|;##################################################################################00000001;Algorithms Part I;Susquehanna University (PA);Toney Danille;20180818;0266;0000009808.81;Big Data|Resilience|Employee Relations|;#######################################################################################################################00000002;Applied Data Science;University of St Thomas (TX);Ladeidra Norberto Corissa;20121116;0188;0000005870.27;Other Mobile Program|Computer Security In|Network Analysis|;###################################################################################';
+SET ARQUIVO_INSCRICOES TO '0000000111130528751201001102347A2014050710000000000211130528751200009081009A2016100923550000000268182492966202105181112A202209121428';
+INSERT INTO usuarios VALUES ('24307783145', 'Yael Naeem Alphonso', 'cbahringer@stark.com');
+INSERT INTO usuarios VALUES ('68879111793', 'Genice Adriano Eladio', 'kristian.harris@gmail.com');
+INSERT INTO usuarios VALUES ('85326069057', 'Scarlet Rolly Shontae', 'florencio.kirlin@yahoo.com','42307783144');
+INSERT INTO usuarios VALUES ('54304783120', 'Kiirsten Johnnetta', 'gleason@farrell.org', '39035733261');
+INSERT INTO usuarios VALUES ('81099655877', 'Valisha Dantae Omaira', 'alba68@yahoo.com', '11963648447');
+INSERT INTO usuarios VALUES ('27326510707', 'Rayshawn Fredie Devone', 'eulah.baumbach@gottlieb.info', '41353330791');
+INSERT INTO cursos VALUES ('Time Series I', 'University of British Columbia (None)', 'Patrik Maari', '20081017', 208, 1958.89);
+INSERT INTO cursos VALUES ('Time Series II', 'South College (TN)', 'Richardo Ikeem', '20130414', 55, 228.97);
+INSERT INTO cursos VALUES ('Business Statistics and Analysis', 'Metropolitan State University (MN)', 'Dong Tyne Arwa', '20111002', 1131, 6585.94);
+INSERT INTO cursos VALUES ('Android App Development with Java', 'University of Southern Indiana (IN)', 'Jaclin Hien Demarkus', '20210406', 792, 2441.35);
+INSERT INTO cursos VALUES ('Analysis of Algorithms', 'Suny Oswego (NY)', 'Millisa Lashunna Chontel', '20151209', 1110, 2340.01);
+INSERT INTO cursos VALUES ('Data Visualization with Python', 'Trinity Christian College (IL)', 'Leana Kandi Jeannett', '20030317', 479, 5378.58);
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Tarleton State University (TX)', 'Anja Vianney Christipher', '20120705', 1068, 9410.84);
+UPDATE inscricoes SET status = 'I' WHERE id_curso = (SELECT id_curso FROM cursos WHERE titulo = 'Algorithms Part I') AND id_usuario = '11130528751';
+UPDATE inscricoes SET status = 'A' WHERE id_curso = (SELECT id_curso FROM cursos WHERE titulo = 'Machine Learning') AND id_usuario = '68182492966';
+SELECT * FROM cursos WHERE titulo = 'Algorithms Part I';
+SELECT * FROM cursos WHERE titulo = 'Google Project Management';
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\echo file ARQUIVO_INSCRICOES
+\echo index inscricoes_idx
+\echo index data_curso_usuario_idx
+DELETE FROM usuarios WHERE id_usuario = '93783219065';
+DELETE FROM usuarios WHERE id_usuario = '68211866402';
+DELETE FROM usuarios WHERE id_usuario = '54304783120';
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+VACUUM usuarios;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\q

@@ -1,0 +1,73 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO usuarios VALUES ('20368885238', 'Joyce Jaclynn Qiana', 'lillie.reichel@ortiz.info');
+OK
+INSERT INTO usuarios VALUES ('36375564315', 'Daymond Destinee', 'kris.kreiger@hotmail.com');
+OK
+INSERT INTO usuarios VALUES ('59237878572', 'Kalyn Jai', 'walker.zelma@yahoo.com', '99777829366');
+OK
+INSERT INTO usuarios VALUES ('20368885238', 'Alethea Mirza Teriann', 'qkertzmann@hotmail.com', '42376879816');
+ERRO: Ja existe um registro com a chave 20368885238
+INSERT INTO cursos VALUES ('Business Statistics and Analysis', 'Metropolitan State University (MN)', 'Dong Tyne Arwa', '20111002', 1131, 6585.94);
+OK
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'University of Southern Indiana (IN)', 'Jaclin Hien Demarkus', '20210406', 792, 2441.35);
+OK
+INSERT INTO cursos VALUES ('Analysis of Algorithms', 'SUNY Oswego (NY)', 'Millisa Lashunna Chontel', '20151209', 1110, 2340.01);
+OK
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Trinity Christian College (IL)', 'Leana Kandi Jeannett', '20030317', 479, 5378.58);
+ERRO: Ja existe um registro com a chave iOS App Development with Swift
+UPDATE usuarios SET saldo = saldo + 9146 WHERE id_usuario = '36375564315';
+OK
+UPDATE usuarios SET saldo = saldo + 3231 WHERE id_usuario = '17288459345';
+ERRO: Registro nao encontrado
+UPDATE usuarios SET saldo = saldo + -4830 WHERE id_usuario = '36375564315';
+ERRO: Valor invalido
+UPDATE usuarios SET saldo = saldo + 4830 WHERE id_usuario = '36375564315';
+OK
+INSERT INTO inscricoes VALUES('00000000', '36375564315');
+OK
+INSERT INTO inscricoes VALUES('00000001', '36375564315');
+OK
+INSERT INTO inscricoes VALUES('00000002', '36375564315');
+OK
+INSERT INTO inscricoes VALUES('00000000', '36375564315');
+ERRO: Ja existe um registro com a chave 0000000036375564315
+INSERT INTO inscricoes VALUES('00000002', '36375564315');
+ERRO: Ja existe um registro com a chave 0000000236375564315
+INSERT INTO inscricoes VALUES('00000000', '57003066167');
+ERRO: Registro nao encontrado
+INSERT INTO inscricoes VALUES('00000046', '20368885238');
+ERRO: Registro nao encontrado
+INSERT INTO inscricoes VALUES('00000001', '59237878572');
+ERRO: Saldo insuficiente
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+20368885238, Joyce Jaclynn Qiana, lillie.reichel@ortiz.info, ***********, 0.00
+36375564315, Daymond Destinee, kris.kreiger@hotmail.com, ***********, 2608.70
+59237878572, Kalyn Jai, walker.zelma@yahoo.com, 99777829366, 0.00
+\echo file ARQUIVO_USUARIOS
+20368885238;Joyce Jaclynn Qiana;lillie.reichel@ortiz.info;***********;0000000000.00;############################################36375564315;Daymond Destinee;kris.kreiger@hotmail.com;***********;0000002608.70;################################################59237878572;Kalyn Jai;walker.zelma@yahoo.com;99777829366;0000000000.00;#########################################################
+\echo index usuarios_idx
+20368885238, 0
+36375564315, 1
+59237878572, 2
+\echo file ARQUIVO_CURSOS
+00000000;Business Statistics and Analysis;Metropolitan State University (MN);Dong Tyne Arwa;20111002;1131;0000006585.94;;#######################################################################################################################################00000001;iOS App Development with Swift;University of Southern Indiana (IN);Jaclin Hien Demarkus;20210406;0792;0000002441.35;;##################################################################################################################################00000002;Analysis of Algorithms;SUNY Oswego (NY);Millisa Lashunna Chontel;20151209;1110;0000002340.01;;#########################################################################################################################################################
+\echo index cursos_idx
+00000000, 0
+00000001, 1
+00000002, 2
+\echo index titulo_idx
+ANALYSIS OF ALGORITHMS, 00000002
+BUSINESS STATISTICS AND ANALYSIS, 00000000
+IOS APP DEVELOPMENT WITH SWIFT, 00000001
+\echo file ARQUIVO_INSCRICOES
+0000000036375564315202106041528A2021060415280000000136375564315202106061703A2021060617030000000236375564315202106132206A202106132206
+\echo index inscricoes_idx
+00000000, 36375564315, 0
+00000001, 36375564315, 1
+00000002, 36375564315, 2
+\q

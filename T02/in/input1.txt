@@ -1,0 +1,12 @@
+INSERT INTO usuarios VALUES ('24307783145', 'Yael Naeem Alphonso', 'cbahringer@stark.com');
+INSERT INTO usuarios VALUES ('68879111793', 'Genice Adriano Eladio', 'kristian.harris@gmail.com');
+INSERT INTO usuarios VALUES ('85326069057', 'Scarlet Rolly Shontae', 'florencio.kirlin@yahoo.com','42307783144');
+INSERT INTO usuarios VALUES ('72176828461', 'Fabian Polly Kashawna', 'kasey28@yahoo.com', '61092116490');
+INSERT INTO usuarios VALUES ('24307783145', 'Kiirsten Johnnetta', 'gleason@farrell.org', '39035733261');
+UPDATE usuarios SET saldo = saldo + 5493 WHERE id_usuario = '68879111793';
+UPDATE usuarios SET saldo = saldo + 7093 WHERE id_usuario = '53871682559';
+UPDATE usuarios SET saldo = saldo + -6443 WHERE id_usuario = '68879111793';
+\echo file ARQUIVO_USUARIOS
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo index usuarios_idx
+\q

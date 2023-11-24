@@ -1,0 +1,86 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO usuarios VALUES ('58737564702', 'Karren Latecia Rochele', 'dickens.magdalena@yahoo.com', '66605657664');
+OK
+INSERT INTO usuarios VALUES ('46916935965', 'Michaelvincent Metta', 'dayana.schuppe@medhurst.biz', '89849690999');
+OK
+INSERT INTO usuarios VALUES ('38747428789', 'Phoebe Edwin', 'rosemary03@hotmail.com');
+OK
+INSERT INTO usuarios VALUES ('68110268504', 'Sindy Lakeshia Carolynn', 'lonzo78@hotmail.com', '42856766766');
+OK
+INSERT INTO usuarios VALUES ('54443017315', 'Olatokunbo Vincenzo', 'skiles.enola@sporer.org');
+OK
+INSERT INTO usuarios VALUES ('42714376303', 'Adama Lanessa', 'nicolas.steuber@hilpert.biz', '20660504344');
+ERRO: Ja existe um registro com a chave 42714376303
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+OK
+INSERT INTO usuarios VALUES ('84858786728', 'Gricelda Damarius Chalice', 'nasir.kilback@olson.com');
+OK
+UPDATE usuarios SET saldo = saldo + 5894 WHERE id_usuario = '65037521605';
+OK
+UPDATE usuarios SET saldo = saldo + 9772 WHERE id_usuario = '47922650827';
+ERRO: Registro nao encontrado
+UPDATE usuarios SET saldo = saldo + -3228 WHERE id_usuario = '58737564702';
+ERRO: Valor invalido
+\echo file ARQUIVO_USUARIOS
+66679595970;Verlon Calisha;kerluke.cole@rempel.org;***********;0000034305.09;###################################################42714376303;Sanaz Hans;rbednar@hotmail.com;95401672648;0000048561.28;###########################################################65037521605;Laith Vanesha Julie;tkovacek@lemke.com;82272144761;0000086047.86;###################################################58737564702;Karren Latecia Rochele;dickens.magdalena@yahoo.com;66605657664;0000000000.00;#######################################46916935965;Michaelvincent Metta;dayana.schuppe@medhurst.biz;89849690999;0000000000.00;#########################################38747428789;Phoebe Edwin;rosemary03@hotmail.com;***********;0000000000.00;######################################################68110268504;Sindy Lakeshia Carolynn;lonzo78@hotmail.com;42856766766;0000000000.00;##############################################54443017315;Olatokunbo Vincenzo;skiles.enola@sporer.org;***********;0000000000.00;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################84858786728;Gricelda Damarius Chalice;nasir.kilback@olson.com;***********;0000000000.00;########################################
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+10406065934, Eyad Chandra, abdul.lebsack@schulist.com, ***********, 0.00
+38747428789, Phoebe Edwin, rosemary03@hotmail.com, ***********, 0.00
+42714376303, Sanaz Hans, rbednar@hotmail.com, 95401672648, 48561.28
+46916935965, Michaelvincent Metta, dayana.schuppe@medhurst.biz, 89849690999, 0.00
+54443017315, Olatokunbo Vincenzo, skiles.enola@sporer.org, ***********, 0.00
+58737564702, Karren Latecia Rochele, dickens.magdalena@yahoo.com, 66605657664, 0.00
+65037521605, Laith Vanesha Julie, tkovacek@lemke.com, 82272144761, 86047.86
+66679595970, Verlon Calisha, kerluke.cole@rempel.org, ***********, 34305.09
+68110268504, Sindy Lakeshia Carolynn, lonzo78@hotmail.com, 42856766766, 0.00
+84858786728, Gricelda Damarius Chalice, nasir.kilback@olson.com, ***********, 0.00
+\echo index usuarios_idx
+003104060659340008387474287890005427143763030001T************003666795959700000681102685040006848587867280009T************002469169359650004650375216050002###############F000003001***002544430173150007587375647020003###############T************
+DELETE FROM usuarios WHERE id_usuario = '66679595970';
+OK
+DELETE FROM usuarios WHERE id_usuario = '94524319844';
+ERRO: Registro nao encontrado
+DELETE FROM usuarios WHERE id_usuario = '65037521605';
+OK
+DELETE FROM usuarios WHERE id_usuario = '94524319844';
+ERRO: Registro nao encontrado
+\echo file ARQUIVO_USUARIOS
+*|679595970;Verlon Calisha;kerluke.cole@rempel.org;***********;0000034305.09;###################################################42714376303;Sanaz Hans;rbednar@hotmail.com;95401672648;0000048561.28;###########################################################*|037521605;Laith Vanesha Julie;tkovacek@lemke.com;82272144761;0000086047.86;###################################################58737564702;Karren Latecia Rochele;dickens.magdalena@yahoo.com;66605657664;0000000000.00;#######################################46916935965;Michaelvincent Metta;dayana.schuppe@medhurst.biz;89849690999;0000000000.00;#########################################38747428789;Phoebe Edwin;rosemary03@hotmail.com;***********;0000000000.00;######################################################68110268504;Sindy Lakeshia Carolynn;lonzo78@hotmail.com;42856766766;0000000000.00;##############################################54443017315;Olatokunbo Vincenzo;skiles.enola@sporer.org;***********;0000000000.00;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################84858786728;Gricelda Damarius Chalice;nasir.kilback@olson.com;***********;0000000000.00;########################################
+\echo index usuarios_idx
+003104060659340008387474287890005427143763030001T************002681102685040006848587867280009###############T************002469169359650004587375647020003###############F000003001***001544430173150007##############################T************
+DELETE FROM usuarios WHERE id_usuario = '10406065934';
+OK
+DELETE FROM usuarios WHERE id_usuario = '38747428789';
+OK
+DELETE FROM usuarios WHERE id_usuario = '42714376303';
+OK
+DELETE FROM usuarios WHERE id_usuario = '46916935965';
+OK
+DELETE FROM usuarios WHERE id_usuario = '54443017315';
+OK
+DELETE FROM usuarios WHERE id_usuario = '58737564702';
+OK
+DELETE FROM usuarios WHERE id_usuario = '65037521605';
+ERRO: Registro nao encontrado
+DELETE FROM usuarios WHERE id_usuario = '66679595970';
+ERRO: Registro nao encontrado
+DELETE FROM usuarios WHERE id_usuario = '68110268504';
+OK
+DELETE FROM usuarios WHERE id_usuario = '84858786728';
+OK
+\echo file ARQUIVO_USUARIOS
+*|679595970;Verlon Calisha;kerluke.cole@rempel.org;***********;0000034305.09;###################################################*|714376303;Sanaz Hans;rbednar@hotmail.com;95401672648;0000048561.28;###########################################################*|037521605;Laith Vanesha Julie;tkovacek@lemke.com;82272144761;0000086047.86;###################################################*|737564702;Karren Latecia Rochele;dickens.magdalena@yahoo.com;66605657664;0000000000.00;#######################################*|916935965;Michaelvincent Metta;dayana.schuppe@medhurst.biz;89849690999;0000000000.00;#########################################*|747428789;Phoebe Edwin;rosemary03@hotmail.com;***********;0000000000.00;######################################################*|110268504;Sindy Lakeshia Carolynn;lonzo78@hotmail.com;42856766766;0000000000.00;##############################################*|443017315;Olatokunbo Vincenzo;skiles.enola@sporer.org;***********;0000000000.00;##############################################*|406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################*|858786728;Gricelda Damarius Chalice;nasir.kilback@olson.com;***********;0000000000.00;########################################
+\echo index usuarios_idx
+000#############################################T************000#############################################T************000#############################################F************000#############################################T************
+VACUUM usuarios;
+OK
+\echo file ARQUIVO_USUARIOS
+ERRO: Arquivo vazio
+\echo index usuarios_idx
+ERRO: Arquivo vazio
+\q

@@ -1,0 +1,73 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+ARQUIVO_USUARIOS TO '76069720480;Falisha Khristine Sergio;hfritsch@fahey.biz;72595351192;0000086030.47;##############################################34563448990;Shericka Silbia;cbrown@becker.com;59105966110;0000088700.51;########################################################84858786728;Zack Whitnee;marvin.haleigh@beatty.net;***********;0000036247.52;###################################################';
+ERRO: Opcao invalida
+SET ARQUIVO_CURSOS TO '00000000;Data Analysis and Interpretation;Benjamin Franklin Institute of Technology (MA);Sanika Alexandros;20090601;0818;0000003761.84;Computer Graphics|Data Warehousing|Database Administrat|;################################################################00000001;Game Design and Development;Chowan University (NC);Deonna Jacie Taleisha;20180711;0494;0000001732.66;Management Accountin|Human Learning|Securities Sales|;########################################################ERRO: Opcao invalida
+####################################00000002;iOS Development for Creative Entrepreneurs;Georgia Gwinnett College (GA);Cerita Johanna;20061010;0315;0000008619.31;Basic Descriptive|Conflict Management|Marketing Management|;#######################################################################';
+ERRO: Opcao invalida
+INSERT INTO usuarios VALUES ('68110268504', 'Sindy Lakeshia Carolynn', 'lonzo78@hotmail.com', '42856766766');
+OK
+INSERT INTO usuarios VALUES ('54443017315', 'Olatokunbo Vincenzo', 'skiles.enola@sporer.org');
+OK
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+OK
+INSERT INTO usuarios VALUES ('84858786728', 'Gricelda Damarius Chalice', 'nasir.kilback@olson.com');
+OK
+INSERT INTO usuarios VALUES ('43953000569', 'Allan Rush', 'qabshire@gmail.com');
+OK
+INSERT INTO usuarios VALUES ('89226775363', 'Yuko Gerado', 'dietrich.kole@tremblay.com', '76328300213');
+OK
+INSERT INTO usuarios VALUES ('85040987847', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+OK
+INSERT INTO usuarios VALUES ('99953000000', 'Shanne Kalinda Janee', 'jordi81@hotmail.com', '82027125163');
+OK
+INSERT INTO cursos VALUES ('Data Visualization with Tableau', 'Mount Mary University (WI)', 'Melba Giacomo Adele', '20081107', 354, 6965.28);
+OK
+INSERT INTO cursos VALUES ('IBM Data Science Professional Certificate', 'Northwood University (MI)', 'Florentino Lawayne Sienna', '20200708', 64, 4963.47);
+OK
+INSERT INTO cursos VALUES ('Practical Time Series Analysis', 'University of British Columbia (None)', 'Patrik Maari', '20081017', 208, 1958.89);
+OK
+INSERT INTO cursos VALUES ('Practical Time Series Analysis', 'South College (TN)', 'Richardo Ikeem', '20130414', 55, 228.97);
+ERRO: Ja existe um registro com a chave Practical Time Series Analysis
+INSERT INTO cursos VALUES ('Analysis of Algorithms', 'Suny Oswego (NY)', 'Millisa Lashunna Chontel', '20151209', 1110, 2340.01);
+OK
+INSERT INTO cursos VALUES ('Data Visualization with Python', 'Trinity Christian College (IL)', 'Leana Kandi Jeannett', '20030317', 479, 5378.58);
+OK
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Tarleton State University (TX)', 'Anja Vianney Christipher', '20120705', 1068, 9410.84);
+OK
+SELECT * FROM usuarios WHERE id_usuario = '54443017315';
+Nos percorridos: 6 ( 0) 2 ( 0)
+54443017315, Olatokunbo Vincenzo, skiles.enola@sporer.org, ***********, 0.00
+SELECT * FROM usuarios WHERE id_usuario = '45143117149';
+Nos percorridos: 6 ( 0) 2 ( 0) 0 ( 1)
+ERRO: Registro nao encontrado
+SELECT * FROM cursos WHERE id_curso = '00000004';
+Nos percorridos: 2 ( 1) 3 ( 1 0)
+00000004, Data Visualization with Python, Trinity Christian College (IL), Leana Kandi Jeannett, 20030317, 479, 5378.58
+SELECT * FROM cursos WHERE id_curso = '00000028';
+Nos percorridos: 2 ( 1) 3 ( 1)
+ERRO: Registro nao encontrado
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+10406065934, Eyad Chandra, abdul.lebsack@schulist.com, ***********, 0.00
+43953000569, Allan Rush, qabshire@gmail.com, ***********, 0.00
+54443017315, Olatokunbo Vincenzo, skiles.enola@sporer.org, ***********, 0.00
+68110268504, Sindy Lakeshia Carolynn, lonzo78@hotmail.com, 42856766766, 0.00
+84858786728, Gricelda Damarius Chalice, nasir.kilback@olson.com, ***********, 0.00
+85040987847, Margarette Venetta Bliss, wlabadie@lesch.biz, ***********, 0.00
+89226775363, Yuko Gerado, dietrich.kole@tremblay.com, 76328300213, 0.00
+99953000000, Shanne Kalinda Janee, jordi81@hotmail.com, 82027125163, 0.00
+\echo file ARQUIVO_USUARIOS
+68110268504;Sindy Lakeshia Carolynn;lonzo78@hotmail.com;42856766766;0000000000.00;##############################################54443017315;Olatokunbo Vincenzo;skiles.enola@sporer.org;***********;0000000000.00;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################84858786728;Gricelda Damarius Chalice;nasir.kilback@olson.com;***********;0000000000.00;########################################43953000569;Allan Rush;qabshire@gmail.com;***********;0000000000.00;############################################################89226775363;Yuko Gerado;dietrich.kole@tremblay.com;76328300213;0000000000.00;###################################################85040987847;Margarette Venetta Bliss;wlabadie@lesch.biz;***********;0000000000.00;##############################################99953000000;Shanne Kalinda Janee;jordi81@hotmail.com;82027125163;0000000000.00;#################################################
+\echo index usuarios_idx
+002104060659340002439530005690004T*********001681102685040000###############T*********001544430173150001###############F000001***001850409878470006###############T*********001999530000000007###############T*********001892267753630005###############F003004***001848587867280003###############F002005***
+\echo file ARQUIVO_CURSOS
+00000000;Data Visualization with Tableau;Mount Mary University (WI);Melba Giacomo Adele;20081107;0354;0000006965.28;;###########################################################################################################################################00000001;IBM Data Science Professional Certificate;Northwood University (MI);Florentino Lawayne Sienna;20200708;0064;0000004963.47;;############################################################################################################################00000002;Practical Time Series Analysis;University of British Columbia (None);Patrik Maari;20081017;0208;0000001958.89;;########################################################################################################################################00000003;Analysis of Algorithms;Suny Oswego (NY);Millisa Lashunna Chontel;20151209;1110;0000002340.01;;#########################################################################################################################################################00000004;Data Visualization with Python;Trinity Christian College (IL);Leana Kandi Jeannett;20030317;0479;0000005378.58;;#######################################################################################################################################00000005;iOS Development for Creative Entrepreneurs;Tarleton State University (TX);Anja Vianney Christipher;20120705;1068;0000009410.84;;#######################################################################################################################
+\echo index cursos_idx
+001000000000000############T*********001000000020002############T*********002000000010001000000030003F000001003002000000040004000000050005T*********
+\echo index titulo_idx
+001ANALYSIS OF ALGORITHMS#############################00000003###########################################################T*********002IOS DEVELOPMENT FOR CREATIVE ENTREPRENEURS#########00000005PRACTICAL TIME SERIES ANALYSIS#####################00000002T*********002DATA VISUALIZATION WITH PYTHON#####################00000004IBM DATA SCIENCE PROFESSIONAL CERTIFICATE##########00000001F000003001001DATA VISUALIZATION WITH TABLEAU####################00000000###########################################################T*********
+\q

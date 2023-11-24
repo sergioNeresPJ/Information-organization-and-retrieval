@@ -1,0 +1,50 @@
+SET BTREE_ORDER 4;
+INSERT INTO usuarios VALUES ('20368885238', 'Joyce Jaclynn Qiana', 'lillie.reichel@ortiz.info');
+INSERT INTO usuarios VALUES ('36375564315', 'Daymond Destinee', 'kris.kreiger@hotmail.com');
+INSERT INTO usuarios VALUES ('59237878572', 'Kalyn Jai', 'walker.zelma@yahoo.com', '99777829366');
+INSERT INTO usuarios VALUES ('46916935965', 'Michaelvincent Metta', 'dayana.schuppe@medhurst.biz', '89849690999');
+INSERT INTO usuarios VALUES ('38747428789', 'Phoebe Edwin', 'rosemary03@hotmail.com');
+INSERT INTO usuarios VALUES ('42714376303', 'Adama Lanessa', 'nicolas.steuber@hilpert.biz', '20660504344');
+INSERT INTO usuarios VALUES ('68110268504', 'Sindy Lakeshia Carolynn', 'lonzo78@hotmail.com', '42856766766');
+INSERT INTO usuarios VALUES ('54443017315', 'Olatokunbo Vincenzo', 'skiles.enola@sporer.org');
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+INSERT INTO usuarios VALUES ('20368885238', 'Alethea Mirza Teriann', 'qkertzmann@hotmail.com', '42376879816');
+INSERT INTO cursos VALUES ('Business Statistics and Analysis', 'Metropolitan State University (MN)', 'Dong Tyne Arwa', '20111002', 1131, 6585.94);
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'University of Southern Indiana (IN)', 'Jaclin Hien Demarkus', '20210406', 792, 2441.35);
+INSERT INTO cursos VALUES ('Analysis of Algorithms', 'SUNY Oswego (NY)', 'Millisa Lashunna Chontel', '20151209', 1110, 2340.01);
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Trinity Christian College (IL)', 'Leana Kandi Jeannett', '20030317', 479, 5378.58);
+INSERT INTO cursos VALUES ('Fundamentals of Computing', 'Mary Baldwin College (VA)', 'Dave Lavonia', '20100517', 117, 4864.64);
+INSERT INTO cursos VALUES ('Databases', 'Northwest Nazarene University (ID)', 'Chanse Jennier Asucena', '20210602', 466, 7643.51);
+INSERT INTO cursos VALUES ('Web Applications with Java', 'Central Christian College (KS)', 'Barbra Cutler', '20060610', 827, 1256.59);
+INSERT INTO cursos VALUES ('Cloud Computing', 'Minnesota State University Moorhead (MN)', 'Shajuan Alana Donavon', '20080919', 691, 2443.98);
+INSERT INTO cursos VALUES ('Java Programming and Software Engineering', 'WinstonSalem State University (NC)', 'Giang Marilu Cortland', '20040505', 192, 6819.69);
+UPDATE usuarios SET saldo = saldo + 9146 WHERE id_usuario = '36375564315';
+UPDATE usuarios SET saldo = saldo + 3231 WHERE id_usuario = '17288459345';
+UPDATE usuarios SET saldo = saldo + -4830 WHERE id_usuario = '36375564315';
+UPDATE usuarios SET saldo = saldo + 4830 WHERE id_usuario = '36375564315';
+INSERT INTO inscricoes VALUES('00000000', '36375564315');
+INSERT INTO inscricoes VALUES('00000001', '36375564315');
+INSERT INTO inscricoes VALUES('00000002', '36375564315');
+INSERT INTO inscricoes VALUES('00000000', '36375564315');
+INSERT INTO inscricoes VALUES('00000002', '46916935965');
+INSERT INTO inscricoes VALUES('00000000', '57003066167');
+INSERT INTO inscricoes VALUES('00000046', '20368885238');
+INSERT INTO inscricoes VALUES('00000001', '59237878572');
+INSERT INTO inscricoes VALUES('00000008', '10406065934');
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\echo file ARQUIVO_INSCRICOES
+\echo index inscricoes_idx
+DELETE FROM usuarios WHERE id_usuario = '59237878572';
+DELETE FROM usuarios WHERE id_usuario = '68110268504';
+DELETE FROM usuarios WHERE id_usuario = '20368885238';
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+VACUUM usuarios;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\q

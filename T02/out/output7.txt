@@ -1,0 +1,145 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO usuarios VALUES ('43953000569', 'Allan Rush', 'qabshire@gmail.com');
+OK
+INSERT INTO usuarios VALUES ('89226775363', 'Yuko Gerado', 'dietrich.kole@tremblay.com', '76328300213');
+OK
+INSERT INTO usuarios VALUES ('85040987847', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+OK
+INSERT INTO usuarios VALUES ('43953000569', 'Shanne Kalinda Janee', 'jordi81@hotmail.com', '82027125163');
+ERRO: Ja existe um registro com a chave 43953000569
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+OK
+INSERT INTO usuarios VALUES ('84858786728', 'Gricelda Damarius Chalice', 'nasir.kilback@olson.com');
+OK
+INSERT INTO usuarios VALUES ('20368885238', 'Joyce Jaclynn Qiana', 'lillie.reichel@ortiz.info');
+OK
+INSERT INTO usuarios VALUES ('36375564315', 'Daymond Destinee', 'kris.kreiger@hotmail.com');
+OK
+INSERT INTO usuarios VALUES ('59237878572', 'Kalyn Jai', 'walker.zelma@yahoo.com', '99777829366');
+OK
+INSERT INTO usuarios VALUES ('10448885209', 'Alethea Mirza Teriann', 'qkertzmann@hotmail.com', '42376879816');
+OK
+INSERT INTO usuarios VALUES ('43953000569', 'Allan Rush', 'qabshire@gmail.com');
+ERRO: Ja existe um registro com a chave 43953000569
+INSERT INTO usuarios VALUES ('89226775363', 'Yuko Gerado', 'dietrich.kole@tremblay.com', '76328300213');
+ERRO: Ja existe um registro com a chave 89226775363
+INSERT INTO usuarios VALUES ('85040987847', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+ERRO: Ja existe um registro com a chave 85040987847
+INSERT INTO usuarios VALUES ('99953000000', 'Shanne Kalinda Janee', 'jordi81@hotmail.com', '82027125163');
+OK
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Tarleton State University (TX)', 'Anja Vianney Christipher', '20120705', 1068, 9410.84);
+OK
+INSERT INTO cursos VALUES ('Web Design for Everybody', 'East Central University (OK)', 'Charlette Reena', '20080222', 1155, 4141.95);
+OK
+INSERT INTO cursos VALUES ('SAS Programming', 'Western State Colorado University (CO)', 'Demetria Bridgett', '20010803', 733, 4120.79);
+OK
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Missouri State University (MO)', 'Davona Collis', '20131112', 865, 4732.71);
+ERRO: Ja existe um registro com a chave iOS Development for Creative Entrepreneurs
+INSERT INTO cursos VALUES ('SAS Programming', 'Western State Colorado University (CO)', 'Demetria Bridgett', '20010803', 733, 4120.79);
+ERRO: Ja existe um registro com a chave SAS Programming
+INSERT INTO cursos VALUES ('Android Development for Creative Entrepreneurs', 'Missouri State University (MO)', 'Davona Collis', '20131112', 865, 4732.71);
+OK
+INSERT INTO cursos VALUES ('Build a Modern Computer', 'Lubbock Christian University (TX)', 'Elio Kalliopi', '20151017', 638, 3283.52);
+OK
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'University of Puerto Rico Arecibo (PR)', 'Suraj Nikia', '20080225', 281, 8969.74);
+OK
+INSERT INTO cursos VALUES ('Fundamentals of Computing', 'Mary Baldwin College (VA)', 'Dave Lavonia', '20100517', 117, 4864.64);
+OK
+INSERT INTO cursos VALUES ('Databases', 'Northwest Nazarene University (ID)', 'Chanse Jennier Asucena', '20210602', 466, 7643.51);
+OK
+INSERT INTO cursos VALUES ('Web Applications with Java', 'Central Christian College (KS)', 'Barbra Cutler', '20060610', 827, 1256.59);
+OK
+INSERT INTO cursos VALUES ('Cloud Computing', 'Minnesota State University Moorhead (MN)', 'Shajuan Alana Donavon', '20080919', 691, 2443.98);
+OK
+INSERT INTO cursos VALUES ('Java Programming and Software Engineering', 'WinstonSalem State University (NC)', 'Giang Marilu Cortland', '20040505', 192, 6819.69);
+OK
+UPDATE usuarios SET saldo = saldo + 7155 WHERE id_usuario = '85040987847';
+OK
+UPDATE usuarios SET saldo = saldo + 5305 WHERE id_usuario = '82084421484';
+ERRO: Registro nao encontrado
+UPDATE usuarios SET saldo = saldo + -3190 WHERE id_usuario = '43953000569';
+ERRO: Valor invalido
+INSERT INTO inscricoes VALUES('00000000', '85040987847');
+ERRO: Saldo insuficiente
+UPDATE usuarios SET saldo = saldo + 9159 WHERE id_usuario = '85040987847';
+OK
+INSERT INTO inscricoes VALUES('00000000', '85040987847');
+OK
+INSERT INTO inscricoes VALUES('00000002', '85040987847');
+OK
+INSERT INTO inscricoes VALUES('00000002', '85040987847');
+ERRO: Ja existe um registro com a chave 0000000285040987847
+INSERT INTO inscricoes VALUES('00000001', '85040987847');
+ERRO: Saldo insuficiente
+INSERT INTO inscricoes VALUES('00000001', '54202969607');
+ERRO: Registro nao encontrado
+INSERT INTO inscricoes VALUES('00000015', '89226775363');
+ERRO: Registro nao encontrado
+INSERT INTO inscricoes VALUES('00000003', '85040987847');
+ERRO: Saldo insuficiente
+INSERT INTO inscricoes VALUES('00000004', '43953000569');
+ERRO: Saldo insuficiente
+INSERT INTO inscricoes VALUES('00000005', '10448885209');
+ERRO: Saldo insuficiente
+INSERT INTO inscricoes VALUES('00000006', '59237878572');
+ERRO: Saldo insuficiente
+SELECT * FROM cursos WHERE titulo = 'SAS Programming';
+Nos percorridos: 6 ( 0) 5 ( 0)
+Nos percorridos: 6 ( 1 0) 2 ( 0) 1 ( 0)
+00000002, SAS Programming, Western State Colorado University (CO), Demetria Bridgett, 20010803, 733, 4120.79
+SELECT * FROM cursos WHERE titulo = 'Approximation Algorithms Part II';
+Nos percorridos: 6 ( 0) 2 ( 1 0) 0 ( 0)
+ERRO: Registro nao encontrado
+SELECT * FROM inscricoes WHERE data_inscricao BETWEEN '200811210000' AND '202210252359' ORDER BY data_inscricao ASC;
+00000000, 85040987847, 202109181639, A, 202109181639
+00000002, 85040987847, 202109202341, A, 202109202341
+
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+10406065934, Eyad Chandra, abdul.lebsack@schulist.com, ***********, 0.00
+10448885209, Alethea Mirza Teriann, qkertzmann@hotmail.com, 42376879816, 0.00
+20368885238, Joyce Jaclynn Qiana, lillie.reichel@ortiz.info, ***********, 0.00
+36375564315, Daymond Destinee, kris.kreiger@hotmail.com, ***********, 0.00
+43953000569, Allan Rush, qabshire@gmail.com, ***********, 0.00
+59237878572, Kalyn Jai, walker.zelma@yahoo.com, 99777829366, 0.00
+84858786728, Gricelda Damarius Chalice, nasir.kilback@olson.com, ***********, 0.00
+85040987847, Margarette Venetta Bliss, wlabadie@lesch.biz, ***********, 2782.37
+89226775363, Yuko Gerado, dietrich.kole@tremblay.com, 76328300213, 0.00
+99953000000, Shanne Kalinda Janee, jordi81@hotmail.com, 82027125163, 0.00
+\echo file ARQUIVO_USUARIOS
+43953000569;Allan Rush;qabshire@gmail.com;***********;0000000000.00;############################################################89226775363;Yuko Gerado;dietrich.kole@tremblay.com;76328300213;0000000000.00;###################################################85040987847;Margarette Venetta Bliss;wlabadie@lesch.biz;***********;0000002782.37;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################84858786728;Gricelda Damarius Chalice;nasir.kilback@olson.com;***********;0000000000.00;########################################20368885238;Joyce Jaclynn Qiana;lillie.reichel@ortiz.info;***********;0000000000.00;############################################36375564315;Daymond Destinee;kris.kreiger@hotmail.com;***********;0000000000.00;################################################59237878572;Kalyn Jai;walker.zelma@yahoo.com;99777829366;0000000000.00;#########################################################10448885209;Alethea Mirza Teriann;qkertzmann@hotmail.com;42376879816;0000000000.00;#############################################99953000000;Shanne Kalinda Janee;jordi81@hotmail.com;82027125163;0000000000.00;#################################################
+\echo index usuarios_idx
+002104060659340003104488852090008T*********002892267753630001999530000000009T*********001203688852380005###############F000004***002592378785720007848587867280004T*********001363755643150006###############T*********001850409878470002###############F003001***001439530005690000###############F002005***
+\echo file ARQUIVO_CURSOS
+00000000;iOS Development for Creative Entrepreneurs;Tarleton State University (TX);Anja Vianney Christipher;20120705;1068;0000009410.84;;#######################################################################################################################00000001;Web Design for Everybody;East Central University (OK);Charlette Reena;20080222;1155;0000004141.95;;####################################################################################################################################################00000002;SAS Programming;Western State Colorado University (CO);Demetria Bridgett;20010803;0733;0000004120.79;;#################################################################################################################################################00000003;Android Development for Creative Entrepreneurs;Missouri State University (MO);Davona Collis;20131112;0865;0000004732.71;;##############################################################################################################################00000004;Build a Modern Computer;Lubbock Christian University (TX);Elio Kalliopi;20151017;0638;0000003283.52;;##################################################################################################################################################00000005;Hadoop Platform and Application Framework;University of Puerto Rico Arecibo (PR);Suraj Nikia;20080225;0281;0000008969.74;;#############################################################################################################################00000006;Fundamentals of Computing;Mary Baldwin College (VA);Dave Lavonia;20100517;0117;0000004864.64;;#########################################################################################################################################################00000007;Databases;Northwest Nazarene University (ID);Chanse Jennier Asucena;20210602;0466;0000007643.51;;######################################################################################################################################################00000008;Web Applications with Java;Central Christian College (KS);Barbra Cutler;20060610;0827;0000001256.59;;##################################################################################################################################################00000009;Cloud Computing;Minnesota State University Moorhead (MN);Shajuan Alana Donavon;20080919;0691;0000002443.98;;###########################################################################################################################################00000010;Java Programming and Software Engineering;WinstonSalem State University (NC);Giang Marilu Cortland;20040505;0192;0000006819.69;;#######################################################################################################################
+\echo index cursos_idx
+001000000000000############T*********001000000020002############T*********001000000010001############F000001***001000000040004############T*********001000000060006############T*********001000000050005############F003004***002000000030003000000070007F002005009001000000080008############T*********001000000100010############T*********001000000090009############F007008***
+\echo index titulo_idx
+001ANDROID DEVELOPMENT FOR CREATIVE ENTREPRENEURS#####00000003###########################################################T*********002WEB APPLICATIONS WITH JAVA#########################00000008WEB DESIGN FOR EVERYBODY###########################00000001T*********002BUILD A MODERN COMPUTER############################00000004DATABASES##########################################00000007F000003007001CLOUD COMPUTING####################################00000009###########################################################T*********002IOS DEVELOPMENT FOR CREATIVE ENTREPRENEURS#########00000000JAVA PROGRAMMING AND SOFTWARE ENGINEERING##########00000010T*********001SAS PROGRAMMING####################################00000002###########################################################F004001***001HADOOP PLATFORM AND APPLICATION FRAMEWORK##########00000005###########################################################F002005***001FUNDAMENTALS OF COMPUTING##########################00000006###########################################################T*********
+\echo file ARQUIVO_INSCRICOES
+0000000085040987847202109181639A2021091816390000000285040987847202109202341A202109202341
+\echo index inscricoes_idx
+0020000000085040987847000000000002850409878470001T*********
+\echo index data_curso_usuario_idx
+00220210918163900000000850409878472021092023410000000285040987847T*********
+DELETE FROM usuarios WHERE id_usuario = '59237878572';
+OK
+DELETE FROM usuarios WHERE id_usuario = '74408638683';
+ERRO: Registro nao encontrado
+DELETE FROM usuarios WHERE id_usuario = '89226775363';
+OK
+\echo file ARQUIVO_USUARIOS
+43953000569;Allan Rush;qabshire@gmail.com;***********;0000000000.00;############################################################*|226775363;Yuko Gerado;dietrich.kole@tremblay.com;76328300213;0000000000.00;###################################################85040987847;Margarette Venetta Bliss;wlabadie@lesch.biz;***********;0000002782.37;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################84858786728;Gricelda Damarius Chalice;nasir.kilback@olson.com;***********;0000000000.00;########################################20368885238;Joyce Jaclynn Qiana;lillie.reichel@ortiz.info;***********;0000000000.00;############################################36375564315;Daymond Destinee;kris.kreiger@hotmail.com;***********;0000000000.00;################################################*|237878572;Kalyn Jai;walker.zelma@yahoo.com;99777829366;0000000000.00;#########################################################10448885209;Alethea Mirza Teriann;qkertzmann@hotmail.com;42376879816;0000000000.00;#############################################99953000000;Shanne Kalinda Janee;jordi81@hotmail.com;82027125163;0000000000.00;#################################################
+\echo index usuarios_idx
+002104060659340003104488852090008T*********001999530000000009###############T*********001203688852380005###############F000004***001848587867280004###############T*********001363755643150006###############T*********001850409878470002###############F003001***001439530005690000###############F002005***
+VACUUM usuarios;
+OK
+\echo file ARQUIVO_USUARIOS
+43953000569;Allan Rush;qabshire@gmail.com;***********;0000000000.00;############################################################85040987847;Margarette Venetta Bliss;wlabadie@lesch.biz;***********;0000002782.37;##############################################10406065934;Eyad Chandra;abdul.lebsack@schulist.com;***********;0000000000.00;##################################################84858786728;Gricelda Damarius Chalice;nasir.kilback@olson.com;***********;0000000000.00;########################################20368885238;Joyce Jaclynn Qiana;lillie.reichel@ortiz.info;***********;0000000000.00;############################################36375564315;Daymond Destinee;kris.kreiger@hotmail.com;***********;0000000000.00;################################################10448885209;Alethea Mirza Teriann;qkertzmann@hotmail.com;42376879816;0000000000.00;#############################################99953000000;Shanne Kalinda Janee;jordi81@hotmail.com;82027125163;0000000000.00;#################################################
+\echo index usuarios_idx
+002104060659340002104488852090006T*********001848587867280003###############T*********001203688852380004###############F000003***001363755643150005###############T*********001999530000000007###############T*********001850409878470001###############F001004***001439530005690000###############F002005***
+\q

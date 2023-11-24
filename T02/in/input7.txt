@@ -1,0 +1,63 @@
+INSERT INTO usuarios VALUES ('43953000569', 'Allan Rush', 'qabshire@gmail.com');
+INSERT INTO usuarios VALUES ('89226775363', 'Yuko Gerado', 'dietrich.kole@tremblay.com', '76328300213');
+INSERT INTO usuarios VALUES ('85040987847', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+INSERT INTO usuarios VALUES ('43953000569', 'Shanne Kalinda Janee', 'jordi81@hotmail.com', '82027125163');
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+INSERT INTO usuarios VALUES ('84858786728', 'Gricelda Damarius Chalice', 'nasir.kilback@olson.com');
+INSERT INTO usuarios VALUES ('20368885238', 'Joyce Jaclynn Qiana', 'lillie.reichel@ortiz.info');
+INSERT INTO usuarios VALUES ('36375564315', 'Daymond Destinee', 'kris.kreiger@hotmail.com');
+INSERT INTO usuarios VALUES ('59237878572', 'Kalyn Jai', 'walker.zelma@yahoo.com', '99777829366');
+INSERT INTO usuarios VALUES ('10448885209', 'Alethea Mirza Teriann', 'qkertzmann@hotmail.com', '42376879816');
+INSERT INTO usuarios VALUES ('43953000569', 'Allan Rush', 'qabshire@gmail.com');
+INSERT INTO usuarios VALUES ('89226775363', 'Yuko Gerado', 'dietrich.kole@tremblay.com', '76328300213');
+INSERT INTO usuarios VALUES ('85040987847', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+INSERT INTO usuarios VALUES ('99953000000', 'Shanne Kalinda Janee', 'jordi81@hotmail.com', '82027125163');
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Tarleton State University (TX)', 'Anja Vianney Christipher', '20120705', 1068, 9410.84);
+INSERT INTO cursos VALUES ('Web Design for Everybody', 'East Central University (OK)', 'Charlette Reena', '20080222', 1155, 4141.95);
+INSERT INTO cursos VALUES ('SAS Programming', 'Western State Colorado University (CO)', 'Demetria Bridgett', '20010803', 733, 4120.79);
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Missouri State University (MO)', 'Davona Collis', '20131112', 865, 4732.71);
+INSERT INTO cursos VALUES ('SAS Programming', 'Western State Colorado University (CO)', 'Demetria Bridgett', '20010803', 733, 4120.79);
+INSERT INTO cursos VALUES ('Android Development for Creative Entrepreneurs', 'Missouri State University (MO)', 'Davona Collis', '20131112', 865, 4732.71);
+INSERT INTO cursos VALUES ('Build a Modern Computer', 'Lubbock Christian University (TX)', 'Elio Kalliopi', '20151017', 638, 3283.52);
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'University of Puerto Rico Arecibo (PR)', 'Suraj Nikia', '20080225', 281, 8969.74);
+INSERT INTO cursos VALUES ('Fundamentals of Computing', 'Mary Baldwin College (VA)', 'Dave Lavonia', '20100517', 117, 4864.64);
+INSERT INTO cursos VALUES ('Databases', 'Northwest Nazarene University (ID)', 'Chanse Jennier Asucena', '20210602', 466, 7643.51);
+INSERT INTO cursos VALUES ('Web Applications with Java', 'Central Christian College (KS)', 'Barbra Cutler', '20060610', 827, 1256.59);
+INSERT INTO cursos VALUES ('Cloud Computing', 'Minnesota State University Moorhead (MN)', 'Shajuan Alana Donavon', '20080919', 691, 2443.98);
+INSERT INTO cursos VALUES ('Java Programming and Software Engineering', 'WinstonSalem State University (NC)', 'Giang Marilu Cortland', '20040505', 192, 6819.69);
+UPDATE usuarios SET saldo = saldo + 7155 WHERE id_usuario = '85040987847';
+UPDATE usuarios SET saldo = saldo + 5305 WHERE id_usuario = '82084421484';
+UPDATE usuarios SET saldo = saldo + -3190 WHERE id_usuario = '43953000569';
+INSERT INTO inscricoes VALUES('00000000', '85040987847');
+UPDATE usuarios SET saldo = saldo + 9159 WHERE id_usuario = '85040987847';
+INSERT INTO inscricoes VALUES('00000000', '85040987847');
+INSERT INTO inscricoes VALUES('00000002', '85040987847');
+INSERT INTO inscricoes VALUES('00000002', '85040987847');
+INSERT INTO inscricoes VALUES('00000001', '85040987847');
+INSERT INTO inscricoes VALUES('00000001', '54202969607');
+INSERT INTO inscricoes VALUES('00000015', '89226775363');
+INSERT INTO inscricoes VALUES('00000003', '85040987847');
+INSERT INTO inscricoes VALUES('00000004', '43953000569');
+INSERT INTO inscricoes VALUES('00000005', '10448885209');
+INSERT INTO inscricoes VALUES('00000006', '59237878572');
+SELECT * FROM cursos WHERE titulo = 'SAS Programming';
+SELECT * FROM cursos WHERE titulo = 'Approximation Algorithms Part II';
+SELECT * FROM inscricoes WHERE data_inscricao BETWEEN '200811210000' AND '202210252359' ORDER BY data_inscricao ASC;
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\echo file ARQUIVO_INSCRICOES
+\echo index inscricoes_idx
+\echo index data_curso_usuario_idx
+DELETE FROM usuarios WHERE id_usuario = '59237878572';
+DELETE FROM usuarios WHERE id_usuario = '74408638683';
+DELETE FROM usuarios WHERE id_usuario = '89226775363';
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+VACUUM usuarios;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\q

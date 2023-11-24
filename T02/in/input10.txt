@@ -1,0 +1,57 @@
+SET BTREE_ORDER 4;
+SET ARQUIVO_USUARIOS TO '74408638683;Chelsy Britany;jerrod27@hotmail.com;90939950984;0000042222.68;######################################################12728898844;Terril Judit Atom;arvel.pfeffer@macejkovic.info;***********;0000032877.31;##########################################68977208649;Cortnie Clover;vance86@considine.com;43247763200;0000074340.79;#####################################################';
+SET ARQUIVO_CURSOS TO '00000000;Introduction to Machine Learning;Baldwin Wallace University (OH);Tonie Shantel Jeramie;20120518;0876;0000008781.92;Computer Programming|Javascript|Statistical Visualiz|;##############################################################################00000001;Clinical Data Science;Hendrix College (AR);Thane Deisi;20211112;0412;0000001408.59;Microsoft Azure|SQL|Exploratory Data Ana|;##########################################################################################################################00000002;Object Oriented Java Programming;Buena Vista University (IA);Taj Catrena Kammy;20160818;0041;0000000923.39;Banking|Internet Of Things|Machine Learning|;###############################################################################################';
+SET ARQUIVO_INSCRICOES TO '0000000068977208649200105110000I2011102623590000000012728898844201209051420C2014072815550000000274408638683200909031632A201702211749';
+INSERT INTO usuarios VALUES ('38747428789', 'Phoebe Edwin', 'rosemary03@hotmail.com');
+INSERT INTO usuarios VALUES ('42714376303', 'Adama Lanessa', 'nicolas.steuber@hilpert.biz', '20660504344');
+INSERT INTO usuarios VALUES ('68110268504', 'Sindy Lakeshia Carolynn', 'lonzo78@hotmail.com', '42856766766');
+INSERT INTO usuarios VALUES ('54443017315', 'Olatokunbo Vincenzo', 'skiles.enola@sporer.org');
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+INSERT INTO usuarios VALUES ('84858786728', 'Gricelda Damarius Chalice', 'nasir.kilback@olson.com');
+INSERT INTO usuarios VALUES ('20368885238', 'Joyce Jaclynn Qiana', 'lillie.reichel@ortiz.info');
+INSERT INTO usuarios VALUES ('36375564315', 'Daymond Destinee', 'kris.kreiger@hotmail.com');
+INSERT INTO usuarios VALUES ('59237878572', 'Kalyn Jai', 'walker.zelma@yahoo.com', '99777829366');
+INSERT INTO usuarios VALUES ('10448885209', 'Alethea Mirza Teriann', 'qkertzmann@hotmail.com', '42376879816');
+INSERT INTO usuarios VALUES ('43953000569', 'Allan Rush', 'qabshire@gmail.com');
+INSERT INTO usuarios VALUES ('89226775363', 'Yuko Gerado', 'dietrich.kole@tremblay.com', '76328300213');
+INSERT INTO usuarios VALUES ('74408638683', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+INSERT INTO usuarios VALUES ('85040987847', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+INSERT INTO usuarios VALUES ('99953000000', 'Shanne Kalinda Janee', 'jordi81@hotmail.com', '82027125163');
+INSERT INTO cursos VALUES ('Web Applications for Everybody', 'Central Christian College (KS)', 'Barbra Cutler', '20060610', 827, 1256.59);
+INSERT INTO cursos VALUES ('Cloud Computing', 'Minnesota State University Moorhead (MN)', 'Shajuan Alana Donavon', '20080919', 691, 2443.98);
+INSERT INTO cursos VALUES ('Java Programming and Software Engineering', 'WinstonSalem State University (NC)', 'Giang Marilu Cortland', '20040505', 192, 6819.69);
+INSERT INTO cursos VALUES ('Clinical Data Science', 'Seton Hill University (PA)', 'Rachele Bettina', '20211107', 1122, 6267.06);
+INSERT INTO cursos VALUES ('Executive Data Science', 'Whitman College (WA)', 'Kassondra Wilhelmina Dainelle', '20140202', 1190, 7719.6);
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Taylor University (IN)', 'Laquasha Lorine', '20060513', 300, 6521.96);
+INSERT INTO cursos VALUES ('IBM Data Science Professional Certificate', 'Bates College (ME)', 'Lindsee Yukari Eddrick', '20040215', 584, 6436.18);
+INSERT INTO cursos VALUES ('iOS App Development with Java', 'Burlington College (VT)', 'Allison Dirk', '20110419', 81, 3522.32);
+INSERT INTO cursos VALUES ('Machine Learning with TensorFlow', 'Lindsey Wilson College (KY)', 'Elly Chery', '20021014', 732, 6360.85);
+INSERT INTO cursos VALUES ('Information Visualization', 'University of South Florida St Petersburg (FL)', 'Lor Jasmina Braden', '20210408', 1080, 2418.36);
+INSERT INTO cursos VALUES ('Machine Learning with Python', 'Lindsey Wilson College (KY)', 'Elly Chery', '20021014', 732, 6360.85);
+UPDATE cursos SET categorias = array_append(categorias, 'PostgreSQL') WHERE titulo = 'Web Applications for Everybody';
+UPDATE cursos SET categorias = array_append(categorias, 'User Experience') WHERE titulo = 'Java Programming and Software Engineering';
+UPDATE cursos SET categorias = array_append(categorias, 'Devops Tools') WHERE titulo = 'Cloud Computing';
+UPDATE cursos SET categorias = array_append(categorias, 'PostgreSQL') WHERE titulo = 'IBM Data Science Professional Certificate';
+UPDATE cursos SET categorias = array_append(categorias, 'Computational Thinki') WHERE titulo = 'Web Applications for Everybody';
+SELECT * FROM cursos WHERE 'PostgreSQL' = ANY (categorias) ORDER BY id_curso ASC;
+SELECT * FROM cursos WHERE 'Human Learning' = ANY (categorias) ORDER BY id_curso ASC;
+SELECT * FROM cursos WHERE 'Machine Learning' = ANY (categorias) ORDER BY id_curso ASC;
+\echo file ARQUIVO_USUARIOS
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo index usuarios_idx
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\echo file ARQUIVO_INSCRICOES
+\echo index data_curso_usuario_idx
+\echo index categorias_primario_idx
+\echo index categorias_secundario_idx
+DELETE FROM usuarios WHERE id_usuario = '68110268504';
+DELETE FROM usuarios WHERE id_usuario = '74408638683';
+DELETE FROM usuarios WHERE id_usuario = '36375564315';
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+VACUUM usuarios;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\q

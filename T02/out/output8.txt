@@ -1,0 +1,86 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO usuarios VALUES ('24307783145', 'Yael Naeem Alphonso', 'cbahringer@stark.com');
+OK
+INSERT INTO usuarios VALUES ('68879111793', 'Genice Adriano Eladio', 'kristian.harris@gmail.com');
+OK
+INSERT INTO usuarios VALUES ('85326069057', 'Scarlet Rolly Shontae', 'florencio.kirlin@yahoo.com','42307783144');
+OK
+INSERT INTO usuarios VALUES ('54304783120', 'Kiirsten Johnnetta', 'gleason@farrell.org', '39035733261');
+OK
+INSERT INTO usuarios VALUES ('81099655877', 'Valisha Dantae Omaira', 'alba68@yahoo.com', '11963648447');
+OK
+INSERT INTO usuarios VALUES ('27326510707', 'Rayshawn Fredie Devone', 'eulah.baumbach@gottlieb.info', '41353330791');
+OK
+INSERT INTO cursos VALUES ('Time Series I', 'University of British Columbia (None)', 'Patrik Maari', '20081017', 208, 1958.89);
+OK
+INSERT INTO cursos VALUES ('Time Series II', 'South College (TN)', 'Richardo Ikeem', '20130414', 55, 228.97);
+OK
+INSERT INTO cursos VALUES ('Business Statistics and Analysis', 'Metropolitan State University (MN)', 'Dong Tyne Arwa', '20111002', 1131, 6585.94);
+OK
+INSERT INTO cursos VALUES ('Android App Development with Java', 'University of Southern Indiana (IN)', 'Jaclin Hien Demarkus', '20210406', 792, 2441.35);
+OK
+INSERT INTO cursos VALUES ('Analysis of Algorithms', 'Suny Oswego (NY)', 'Millisa Lashunna Chontel', '20151209', 1110, 2340.01);
+OK
+INSERT INTO cursos VALUES ('Data Visualization with Python', 'Trinity Christian College (IL)', 'Leana Kandi Jeannett', '20030317', 479, 5378.58);
+OK
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Tarleton State University (TX)', 'Anja Vianney Christipher', '20120705', 1068, 9410.84);
+OK
+UPDATE inscricoes SET status = 'I' WHERE id_curso = (SELECT id_curso FROM cursos WHERE titulo = 'Algorithms Part I') AND id_usuario = '11130528751';
+OK
+UPDATE inscricoes SET status = 'A' WHERE id_curso = (SELECT id_curso FROM cursos WHERE titulo = 'Machine Learning') AND id_usuario = '68182492966';
+ERRO: Registro nao encontrado
+SELECT * FROM cursos WHERE titulo = 'Algorithms Part I';
+Nos percorridos: 2 ( 1 0) 0 ( 1 0)
+Nos percorridos: 2 ( 1 0) 0 ( 1)
+00000001, Algorithms Part I, Susquehanna University (PA), Toney Danille, 20180818, 266, 9808.81
+SELECT * FROM cursos WHERE titulo = 'Google Project Management';
+Nos percorridos: 2 ( 1 0) 3 ( 1 2)
+ERRO: Registro nao encontrado
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+11130528751, Aviance Kaneshia, maryam30@yahoo.com, ***********, 58797.82
+24307783145, Yael Naeem Alphonso, cbahringer@stark.com, ***********, 0.00
+27326510707, Rayshawn Fredie Devone, eulah.baumbach@gottlieb.info, 41353330791, 0.00
+54304783120, Kiirsten Johnnetta, gleason@farrell.org, 39035733261, 0.00
+68182492966, Virgilio Aixa Silviano, mschaden@hotmail.com, ***********, 97910.54
+68879111793, Genice Adriano Eladio, kristian.harris@gmail.com, ***********, 0.00
+81099655877, Valisha Dantae Omaira, alba68@yahoo.com, 11963648447, 0.00
+85326069057, Scarlet Rolly Shontae, florencio.kirlin@yahoo.com, 42307783144, 0.00
+93783219065, Shannice Shelbey, gracie27@gmail.com, 96892923607, 20652.41
+\echo file ARQUIVO_USUARIOS
+11130528751;Aviance Kaneshia;maryam30@yahoo.com;***********;0000058797.82;######################################################68182492966;Virgilio Aixa Silviano;mschaden@hotmail.com;***********;0000097910.54;##############################################93783219065;Shannice Shelbey;gracie27@gmail.com;96892923607;0000020652.41;######################################################24307783145;Yael Naeem Alphonso;cbahringer@stark.com;***********;0000000000.00;#################################################68879111793;Genice Adriano Eladio;kristian.harris@gmail.com;***********;0000000000.00;##########################################85326069057;Scarlet Rolly Shontae;florencio.kirlin@yahoo.com;42307783144;0000000000.00;#########################################54304783120;Kiirsten Johnnetta;gleason@farrell.org;39035733261;0000000000.00;###################################################81099655877;Valisha Dantae Omaira;alba68@yahoo.com;11963648447;0000000000.00;###################################################27326510707;Rayshawn Fredie Devone;eulah.baumbach@gottlieb.info;41353330791;0000000000.00;######################################
+\echo index usuarios_idx
+002111305287510000243077831450003###############T************002688791117930004810996558770007###############T************003273265107070008681824929660001853260690570005F000004001003001937832190650002##############################T************001543047831200006##############################T************
+\echo file ARQUIVO_CURSOS
+00000000;Machine Learning;Rosalind Franklin University of Medicine and Scienc;Lizzete Osmar;20210823;1052;0000009195.65;Data Model|Applied Machine Lear|Business Communicati|;##################################################################################00000001;Algorithms Part I;Susquehanna University (PA);Toney Danille;20180818;0266;0000009808.81;Big Data|Resilience|Employee Relations|;#######################################################################################################################00000002;Applied Data Science;University of St Thomas (TX);Ladeidra Norberto Corissa;20121116;0188;0000005870.27;Other Mobile Program|Computer Security In|Network Analysis|;###################################################################################00000003;Time Series I;University of British Columbia (None);Patrik Maari;20081017;0208;0000001958.89;;#########################################################################################################################################################00000004;Time Series II;South College (TN);Richardo Ikeem;20130414;0055;0000000228.97;;#########################################################################################################################################################################00000005;Business Statistics and Analysis;Metropolitan State University (MN);Dong Tyne Arwa;20111002;1131;0000006585.94;;#######################################################################################################################################00000006;Android App Development with Java;University of Southern Indiana (IN);Jaclin Hien Demarkus;20210406;0792;0000002441.35;;###############################################################################################################################00000007;Analysis of Algorithms;Suny Oswego (NY);Millisa Lashunna Chontel;20151209;1110;0000002340.01;;#########################################################################################################################################################00000008;Data Visualization with Python;Trinity Christian College (IL);Leana Kandi Jeannett;20030317;0479;0000005378.58;;#######################################################################################################################################00000009;iOS Development for Creative Entrepreneurs;Tarleton State University (TX);Anja Vianney Christipher;20120705;1068;0000009410.84;;#######################################################################################################################
+\echo index cursos_idx
+002000000000000000000010001############T************002000000030003000000040004############T************003000000020002000000050005000000080008F000001003004002000000060006000000070007############T************001000000090009########################T************
+\echo index titulo_idx
+003ALGORITHMS PART I##################################00000001ANALYSIS OF ALGORITHMS#############################00000007ANDROID APP DEVELOPMENT WITH JAVA##################00000006T************002TIME SERIES I######################################00000003TIME SERIES II#####################################00000004###########################################################T************002APPLIED DATA SCIENCE###############################00000002MACHINE LEARNING###################################00000000###########################################################F000003001***003BUSINESS STATISTICS AND ANALYSIS###################00000005DATA VISUALIZATION WITH PYTHON#####################00000008IOS DEVELOPMENT FOR CREATIVE ENTREPRENEURS#########00000009T************
+\echo file ARQUIVO_INSCRICOES
+0000000111130528751201001102347I2021060617030000000211130528751200009081009A2016100923550000000268182492966202105181112A202209121428
+\echo index inscricoes_idx
+003000000011113052875100000000000211130528751000100000002681824929660002T************
+\echo index data_curso_usuario_idx
+003200009081009000000021113052875120100110234700000001111305287512021051811120000000268182492966T************
+DELETE FROM usuarios WHERE id_usuario = '93783219065';
+OK
+DELETE FROM usuarios WHERE id_usuario = '68211866402';
+ERRO: Registro nao encontrado
+DELETE FROM usuarios WHERE id_usuario = '54304783120';
+OK
+\echo file ARQUIVO_USUARIOS
+11130528751;Aviance Kaneshia;maryam30@yahoo.com;***********;0000058797.82;######################################################68182492966;Virgilio Aixa Silviano;mschaden@hotmail.com;***********;0000097910.54;##############################################*|783219065;Shannice Shelbey;gracie27@gmail.com;96892923607;0000020652.41;######################################################24307783145;Yael Naeem Alphonso;cbahringer@stark.com;***********;0000000000.00;#################################################68879111793;Genice Adriano Eladio;kristian.harris@gmail.com;***********;0000000000.00;##########################################85326069057;Scarlet Rolly Shontae;florencio.kirlin@yahoo.com;42307783144;0000000000.00;#########################################*|304783120;Kiirsten Johnnetta;gleason@farrell.org;39035733261;0000000000.00;###################################################81099655877;Valisha Dantae Omaira;alba68@yahoo.com;11963648447;0000000000.00;###################################################27326510707;Rayshawn Fredie Devone;eulah.baumbach@gottlieb.info;41353330791;0000000000.00;######################################
+\echo index usuarios_idx
+001111305287510000##############################T************001688791117930004##############################T************003243077831450003681824929660001810996558770007F000004001003001853260690570005##############################T************001273265107070008##############################T************
+VACUUM usuarios;
+OK
+\echo file ARQUIVO_USUARIOS
+11130528751;Aviance Kaneshia;maryam30@yahoo.com;***********;0000058797.82;######################################################68182492966;Virgilio Aixa Silviano;mschaden@hotmail.com;***********;0000097910.54;##############################################24307783145;Yael Naeem Alphonso;cbahringer@stark.com;***********;0000000000.00;#################################################68879111793;Genice Adriano Eladio;kristian.harris@gmail.com;***********;0000000000.00;##########################################85326069057;Scarlet Rolly Shontae;florencio.kirlin@yahoo.com;42307783144;0000000000.00;#########################################81099655877;Valisha Dantae Omaira;alba68@yahoo.com;11963648447;0000000000.00;###################################################27326510707;Rayshawn Fredie Devone;eulah.baumbach@gottlieb.info;41353330791;0000000000.00;######################################
+\echo index usuarios_idx
+003111305287510000243077831450002273265107070006T************003688791117930003810996558770005853260690570004T************001681824929660001##############################F000001******
+\q

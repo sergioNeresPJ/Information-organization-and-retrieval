@@ -1,0 +1,24 @@
+SET BTREE_ORDER 4;
+INSERT INTO usuarios VALUES ('81099655877', 'Valisha Dantae Omaira', 'alba68@yahoo.com', '11963648447');
+INSERT INTO usuarios VALUES ('27326510707', 'Rayshawn Fredie Devone', 'eulah.baumbach@gottlieb.info', '41353330791');
+INSERT INTO usuarios VALUES ('72176828461', 'Fabian Polly Kashawna', 'kasey28@yahoo.com', '61092116490');
+INSERT INTO usuarios VALUES ('46916935965', 'Michaelvincent Metta', 'dayana.schuppe@medhurst.biz', '89849690999');
+INSERT INTO usuarios VALUES ('72176828461', 'Kaprice Otisha Kellianne', 'miracle.reynolds@gmail.com', '45632620898');
+INSERT INTO usuarios VALUES ('92176828123', 'Kaprice Otisha Kellianne', 'miracle.reynolds@gmail.com', '45632620898');
+INSERT INTO usuarios VALUES ('38747428789', 'Phoebe Edwin', 'rosemary03@hotmail.com');
+UPDATE usuarios SET telefone = '30172008115' WHERE id_usuario = '72176828461';
+UPDATE usuarios SET telefone = '92579378563' WHERE id_usuario = '96979297634';
+INSERT INTO cursos VALUES ('Executive Data Science', 'Whitman College (WA)', 'Kassondra Wilhelmina Dainelle', '20140202', 1190, 7719.6);
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Taylor University (IN)', 'Laquasha Lorine', '20060513', 300, 6521.96);
+INSERT INTO cursos VALUES ('IBM Data Science Professional Certificate', 'Bates College (ME)', 'Lindsee Yukari Eddrick', '20040215', 584, 6436.18);
+INSERT INTO cursos VALUES ('iOS App Development with Swift', 'Burlington College (VT)', 'Allison Dirk', '20110419', 81, 3522.32);
+INSERT INTO cursos VALUES ('Machine Learning with TensorFlow', 'Lindsey Wilson College (KY)', 'Elly Chery', '20021014', 732, 6360.85);
+INSERT INTO cursos VALUES ('Information Visualization', 'University of South Florida St Petersburg (FL)', 'Lor Jasmina Braden', '20210408', 1080, 2418.36);
+INSERT INTO cursos VALUES ('Machine Learning with Python', 'Lindsey Wilson College (KY)', 'Elly Chery', '20021014', 732, 6360.85);
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\q

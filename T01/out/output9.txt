@@ -1,0 +1,52 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO cursos VALUES ('Build a Modern Computer', 'Lubbock Christian University (TX)', 'Elio Kalliopi', '20151017', 638, 3283.52);
+OK
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'University of Puerto Rico Arecibo (PR)', 'Suraj Nikia', '20080225', 281, 8969.74);
+OK
+INSERT INTO cursos VALUES ('Fundamentals of Computing', 'Mary Baldwin College (VA)', 'Dave Lavonia', '20100517', 117, 4864.64);
+OK
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'Northwest Nazarene University (ID)', 'Chanse Jennier Asucena', '20210602', 466, 7643.51);
+ERRO: Ja existe um registro com a chave Hadoop Platform and Application Framework
+UPDATE cursos SET categorias = array_append(categorias, 'Tableau Software') WHERE titulo = 'Fundamentals of Computing';
+OK
+UPDATE cursos SET categorias = array_append(categorias, 'Product Design') WHERE titulo = 'Fundamentals of Computing';
+OK
+UPDATE cursos SET categorias = array_append(categorias, 'Data Visualization S') WHERE titulo = 'Hadoop Platform and Application Framework';
+OK
+UPDATE cursos SET categorias = array_append(categorias, 'Product Design') WHERE titulo = 'Survey Data Collection and Analytics';
+ERRO: Registro nao encontrado
+UPDATE cursos SET categorias = array_append(categorias, 'Material Handling') WHERE titulo = 'Build a Modern Computer';
+OK
+SELECT * FROM cursos WHERE 'Product Design' = ANY (categorias) ORDER BY id_curso ASC;
+Registros percorridos: 1
+00000002, Fundamentals of Computing, Mary Baldwin College (VA), Dave Lavonia, 20100517, 117, 4864.64
+SELECT * FROM cursos WHERE 'Change Management' = ANY (categorias) ORDER BY id_curso ASC;
+AVISO: Nenhum registro encontrado
+\echo file ARQUIVO_CURSOS
+00000000;Build a Modern Computer;Lubbock Christian University (TX);Elio Kalliopi;20151017;0638;0000003283.52;Material Handling;#################################################################################################################################00000001;Hadoop Platform and Application Framework;University of Puerto Rico Arecibo (PR);Suraj Nikia;20080225;0281;0000008969.74;Data Visualization S;#########################################################################################################00000002;Fundamentals of Computing;Mary Baldwin College (VA);Dave Lavonia;20100517;0117;0000004864.64;Tableau Software|Product Design;##########################################################################################################################
+\echo index cursos_idx
+00000000, 0
+00000001, 1
+00000002, 2
+\echo index titulo_idx
+BUILD A MODERN COMPUTER, 00000000
+FUNDAMENTALS OF COMPUTING, 00000002
+HADOOP PLATFORM AND APPLICATION FRAMEWORK, 00000001
+\echo index data_curso_usuario_idx
+ERRO: Arquivo vazio
+\echo index categorias_primario_idx
+00000002, -1
+00000002, -1
+00000001, -1
+00000000, -1
+\echo index categorias_secundario_idx
+DATA VISUALIZATION S, 2
+MATERIAL HANDLING, 3
+PRODUCT DESIGN, 1
+TABLEAU SOFTWARE, 0
+\q

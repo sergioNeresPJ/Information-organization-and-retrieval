@@ -1,0 +1,62 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+UPDATE inscricoes SET status = 'I' WHERE id_curso = (SELECT id_curso FROM cursos WHERE titulo = 'Algorithms Part I') AND id_usuario = '11130528751';
+OK
+UPDATE inscricoes SET status = 'A' WHERE id_curso = (SELECT id_curso FROM cursos WHERE titulo = 'Machine Learning') AND id_usuario = '68182492966';
+ERRO: Registro nao encontrado
+SELECT * FROM cursos WHERE titulo = 'Algorithms Part I';
+Registros percorridos: 1 0
+Registros percorridos: 1
+00000001, Algorithms Part I, Susquehanna University (PA), Toney Danille, 20180818, 266, 9808.81
+SELECT * FROM cursos WHERE titulo = 'Google Project Management';
+Registros percorridos: 1 2
+ERRO: Registro nao encontrado
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+11130528751, Aviance Kaneshia, maryam30@yahoo.com, ***********, 58797.82
+68182492966, Virgilio Aixa Silviano, mschaden@hotmail.com, ***********, 97910.54
+93783219065, Shannice Shelbey, gracie27@gmail.com, 96892923607, 20652.41
+\echo file ARQUIVO_USUARIOS
+11130528751;Aviance Kaneshia;maryam30@yahoo.com;***********;0000058797.82;######################################################68182492966;Virgilio Aixa Silviano;mschaden@hotmail.com;***********;0000097910.54;##############################################93783219065;Shannice Shelbey;gracie27@gmail.com;96892923607;0000020652.41;######################################################
+\echo index usuarios_idx
+11130528751, 0
+68182492966, 1
+93783219065, 2
+\echo file ARQUIVO_CURSOS
+00000000;Machine Learning;Rosalind Franklin University of Medicine and Scienc;Lizzete Osmar;20210823;1052;0000009195.65;Data Model|Applied Machine Lear|Business Communicati|;##################################################################################00000001;Algorithms Part I;Susquehanna University (PA);Toney Danille;20180818;0266;0000009808.81;Big Data|Resilience|Employee Relations|;#######################################################################################################################00000002;Applied Data Science;University of St Thomas (TX);Ladeidra Norberto Corissa;20121116;0188;0000005870.27;Other Mobile Program|Computer Security In|Network Analysis|;###################################################################################
+\echo index cursos_idx
+00000000, 0
+00000001, 1
+00000002, 2
+\echo index titulo_idx
+ALGORITHMS PART I, 00000001
+APPLIED DATA SCIENCE, 00000002
+MACHINE LEARNING, 00000000
+\echo file ARQUIVO_INSCRICOES
+0000000111130528751201001102347I2021031814300000000211130528751200009081009A2016100923550000000268182492966202105181112A202209121428
+\echo index inscricoes_idx
+00000001, 11130528751, 0
+00000002, 11130528751, 1
+00000002, 68182492966, 2
+\echo index data_curso_usuario_idx
+200009081009, 00000002, 11130528751
+201001102347, 00000001, 11130528751
+202105181112, 00000002, 68182492966
+DELETE FROM usuarios WHERE id_usuario = '93783219065';
+OK
+DELETE FROM usuarios WHERE id_usuario = '68211866402';
+ERRO: Registro nao encontrado
+VACUUM usuarios;
+OK
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+11130528751, Aviance Kaneshia, maryam30@yahoo.com, ***********, 58797.82
+68182492966, Virgilio Aixa Silviano, mschaden@hotmail.com, ***********, 97910.54
+\echo file ARQUIVO_USUARIOS
+11130528751;Aviance Kaneshia;maryam30@yahoo.com;***********;0000058797.82;######################################################68182492966;Virgilio Aixa Silviano;mschaden@hotmail.com;***********;0000097910.54;##############################################
+\echo index usuarios_idx
+11130528751, 0
+68182492966, 1
+\q

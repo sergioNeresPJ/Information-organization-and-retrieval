@@ -1,0 +1,31 @@
+INSERT INTO cursos VALUES ('Data Visualization with Tableau', 'Mount Mary University (WI)', 'Melba Giacomo Adele', '20081107', 354, 6965.28);
+INSERT INTO cursos VALUES ('IBM Data Science Junior Certificate', 'Northwood University (MI)', 'Florentino Lawayne Sienna', '20200708', 64, 4963.47);
+INSERT INTO cursos VALUES ('Time Series I', 'University of British Columbia (None)', 'Patrik Maari', '20081017', 208, 1958.89);
+INSERT INTO cursos VALUES ('Time Series II', 'South College (TN)', 'Richardo Ikeem', '20130414', 55, 228.97);
+INSERT INTO cursos VALUES ('Business Statistics and Analysis', 'Metropolitan State University (MN)', 'Dong Tyne Arwa', '20111002', 1131, 6585.94);
+INSERT INTO cursos VALUES ('Android App Development with Java', 'University of Southern Indiana (IN)', 'Jaclin Hien Demarkus', '20210406', 792, 2441.35);
+INSERT INTO cursos VALUES ('Analysis of Algorithms', 'Suny Oswego (NY)', 'Millisa Lashunna Chontel', '20151209', 1110, 2340.01);
+INSERT INTO cursos VALUES ('Data Visualization with Python', 'Trinity Christian College (IL)', 'Leana Kandi Jeannett', '20030317', 479, 5378.58);
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Tarleton State University (TX)', 'Anja Vianney Christipher', '20120705', 1068, 9410.84);
+INSERT INTO cursos VALUES ('Web Design for Everybody', 'East Central University (OK)', 'Charlette Reena', '20080222', 1155, 4141.95);
+INSERT INTO cursos VALUES ('SAS Programming', 'Western State Colorado University (CO)', 'Demetria Bridgett', '20010803', 733, 4120.79);
+INSERT INTO cursos VALUES ('Android Development for Creative Entrepreneurs', 'Missouri State University (MO)', 'Davona Collis', '20131112', 865, 4732.71);
+INSERT INTO cursos VALUES ('Build a Modern Computer', 'Lubbock Christian University (TX)', 'Elio Kalliopi', '20151017', 638, 3283.52);
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'University of Puerto Rico Arecibo (PR)', 'Suraj Nikia', '20080225', 281, 8969.74);
+INSERT INTO cursos VALUES ('Fundamentals of Computing', 'Mary Baldwin College (VA)', 'Dave Lavonia', '20100517', 117, 4864.64);
+INSERT INTO cursos VALUES ('Hadoop Platform and Application Framework', 'Northwest Nazarene University (ID)', 'Chanse Jennier Asucena', '20210602', 466, 7643.51);
+UPDATE cursos SET categorias = array_append(categorias, 'Tableau Software') WHERE titulo = 'Fundamentals of Computing';
+\echo file ARQUIVO_CURSOS
+UPDATE cursos SET categorias = array_append(categorias, 'Product Design') WHERE titulo = 'Fundamentals of Computing';
+UPDATE cursos SET categorias = array_append(categorias, 'Data Visualization S') WHERE titulo = 'Hadoop Platform and Application Framework';
+UPDATE cursos SET categorias = array_append(categorias, 'Product Design') WHERE titulo = 'Survey Data Collection and Analytics';
+UPDATE cursos SET categorias = array_append(categorias, 'Material Handling') WHERE titulo = 'Build a Modern Computer';
+SELECT * FROM cursos WHERE 'Product Design' = ANY (categorias) ORDER BY id_curso ASC;
+SELECT * FROM cursos WHERE 'Change Management' = ANY (categorias) ORDER BY id_curso ASC;
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\echo index data_curso_usuario_idx
+\echo index categorias_primario_idx
+\echo index categorias_secundario_idx
+\q

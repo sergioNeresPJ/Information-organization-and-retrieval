@@ -1,0 +1,28 @@
+SET ARQUIVO_USUARIOS TO '76069720480;Falisha Khristine Sergio;hfritsch@fahey.biz;72595351192;0000086030.47;##############################################34563448990;Shericka Silbia;cbrown@becker.com;59105966110;0000088700.51;########################################################84858786728;Zack Whitnee;marvin.haleigh@beatty.net;***********;0000036247.52;###################################################';
+SET ARQUIVO_CURSOS TO '00000000;Data Analysis and Interpretation;Benjamin Franklin Institute of Technology (MA);Sanika Alexandros;20090601;0818;0000003761.84;Computer Graphics|Data Warehousing|Database Administrat|;################################################################00000001;Game Design and Development;Chowan University (NC);Deonna Jacie Taleisha;20180711;0494;0000001732.66;Management Accountin|Human Learning|Securities Sales|;############################################################################################00000002;iOS Development for Creative Entrepreneurs;Georgia Gwinnett College (GA);Cerita Johanna;20061010;0315;0000008619.31;Basic Descriptive|Conflict Management|Marketing Management|;#######################################################################';
+INSERT INTO usuarios VALUES ('68110268504', 'Sindy Lakeshia Carolynn', 'lonzo78@hotmail.com', '42856766766');
+INSERT INTO usuarios VALUES ('54443017315', 'Olatokunbo Vincenzo', 'skiles.enola@sporer.org');
+INSERT INTO usuarios VALUES ('10406065934', 'Eyad Chandra', 'abdul.lebsack@schulist.com');
+INSERT INTO usuarios VALUES ('84858786728', 'Gricelda Damarius Chalice', 'nasir.kilback@olson.com');
+INSERT INTO usuarios VALUES ('43953000569', 'Allan Rush', 'qabshire@gmail.com');
+INSERT INTO usuarios VALUES ('89226775363', 'Yuko Gerado', 'dietrich.kole@tremblay.com', '76328300213');
+INSERT INTO usuarios VALUES ('85040987847', 'Margarette Venetta Bliss', 'wlabadie@lesch.biz');
+INSERT INTO usuarios VALUES ('99953000000', 'Shanne Kalinda Janee', 'jordi81@hotmail.com', '82027125163');
+INSERT INTO cursos VALUES ('Data Visualization with Tableau', 'Mount Mary University (WI)', 'Melba Giacomo Adele', '20081107', 354, 6965.28);
+INSERT INTO cursos VALUES ('IBM Data Science Professional Certificate', 'Northwood University (MI)', 'Florentino Lawayne Sienna', '20200708', 64, 4963.47);
+INSERT INTO cursos VALUES ('Practical Time Series Analysis', 'University of British Columbia (None)', 'Patrik Maari', '20081017', 208, 1958.89);
+INSERT INTO cursos VALUES ('Practical Time Series Analysis', 'South College (TN)', 'Richardo Ikeem', '20130414', 55, 228.97);
+INSERT INTO cursos VALUES ('Analysis of Algorithms', 'Suny Oswego (NY)', 'Millisa Lashunna Chontel', '20151209', 1110, 2340.01);
+INSERT INTO cursos VALUES ('Data Visualization with Python', 'Trinity Christian College (IL)', 'Leana Kandi Jeannett', '20030317', 479, 5378.58);
+INSERT INTO cursos VALUES ('iOS Development for Creative Entrepreneurs', 'Tarleton State University (TX)', 'Anja Vianney Christipher', '20120705', 1068, 9410.84);
+SELECT * FROM usuarios WHERE id_usuario = '54443017315';
+SELECT * FROM usuarios WHERE id_usuario = '45143117149';
+SELECT * FROM cursos WHERE id_curso = '00000004';
+SELECT * FROM cursos WHERE id_curso = '00000028';
+SELECT * FROM usuarios ORDER BY id_usuario ASC;
+\echo file ARQUIVO_USUARIOS
+\echo index usuarios_idx
+\echo file ARQUIVO_CURSOS
+\echo index cursos_idx
+\echo index titulo_idx
+\q

@@ -1,0 +1,82 @@
+Indice usuarios_idx criado com sucesso!
+Indice cursos_idx criado com sucesso!
+Indice inscricoes_idx criado com sucesso!
+Indice titulo_idx criado com sucesso!
+Indice data_curso_usuario_idx criado com sucesso!
+Indice categorias_idx criado com sucesso!
+INSERT INTO cursos VALUES ('Web Applications for Everybody', 'Central Christian College (KS)', 'Barbra Cutler', '20060610', 827, 1256.59);
+OK
+INSERT INTO cursos VALUES ('Cloud Computing', 'Minnesota State University Moorhead (MN)', 'Shajuan Alana Donavon', '20080919', 691, 2443.98);
+OK
+INSERT INTO cursos VALUES ('Java Programming and Software Engineering', 'WinstonSalem State University (NC)', 'Giang Marilu Cortland', '20040505', 192, 6819.69);
+OK
+INSERT INTO cursos VALUES ('Clinical Data Science', 'Seton Hill University (PA)', 'Rachele Bettina', '20211107', 1122, 6267.06);
+ERRO: Ja existe um registro com a chave Clinical Data Science
+UPDATE cursos SET categorias = array_append(categorias, 'PostgreSQL') WHERE titulo = 'Web Applications for Everybody';
+OK
+UPDATE cursos SET categorias = array_append(categorias, 'User Experience') WHERE titulo = 'Java Programming and Software Engineering';
+OK
+UPDATE cursos SET categorias = array_append(categorias, 'Devops Tools') WHERE titulo = 'Cloud Computing';
+OK
+UPDATE cursos SET categorias = array_append(categorias, 'PostgreSQL') WHERE titulo = 'IBM Data Science Professional Certificate';
+ERRO: Registro nao encontrado
+UPDATE cursos SET categorias = array_append(categorias, 'Computational Thinki') WHERE titulo = 'Web Applications for Everybody';
+OK
+SELECT * FROM cursos WHERE 'PostgreSQL' = ANY (categorias) ORDER BY id_curso ASC;
+Registros percorridos: 9
+00000003, Web Applications for Everybody, Central Christian College (KS), Barbra Cutler, 20060610, 827, 1256.59
+SELECT * FROM cursos WHERE 'Human Learning' = ANY (categorias) ORDER BY id_curso ASC;
+AVISO: Nenhum registro encontrado
+SELECT * FROM cursos WHERE 'Machine Learning' = ANY (categorias) ORDER BY id_curso ASC;
+AVISO: Nenhum registro encontrado
+\echo file ARQUIVO_CURSOS
+00000000;Introduction to Machine Learning;Baldwin Wallace University (OH);Tonie Shantel Jeramie;20120518;0876;0000008781.92;Computer Programming|Javascript|Statistical Visualiz|;##############################################################################00000001;Clinical Data Science;Hendrix College (AR);Thane Deisi;20211112;0412;0000001408.59;Microsoft Azure|SQL|Exploratory Data Ana|;##########################################################################################################################00000002;Object Oriented Java Programming;Buena Vista University (IA);Taj Catrena Kammy;20160818;0041;0000000923.39;Banking|Internet Of Things|Machine Learning Alg|;###########################################################################################00000003;Web Applications for Everybody;Central Christian College (KS);Barbra Cutler;20060610;0827;0000001256.59;PostgreSQL|Computational Thinki;###############################################################################################################00000004;Cloud Computing;Minnesota State University Moorhead (MN);Shajuan Alana Donavon;20080919;0691;0000002443.98;Devops Tools;###############################################################################################################################00000005;Java Programming and Software Engineering;WinstonSalem State University (NC);Giang Marilu Cortland;20040505;0192;0000006819.69;User Experience;########################################################################################################
+\echo file ARQUIVO_INSCRICOES
+0000000068977208649200105110000I2011102623590000000012728898844201209051420C2014072815550000000274408638683200909031632A201702211749
+\echo index cursos_idx
+00000000, 0
+00000001, 1
+00000002, 2
+00000003, 3
+00000004, 4
+00000005, 5
+\echo index titulo_idx
+CLINICAL DATA SCIENCE, 00000001
+CLOUD COMPUTING, 00000004
+INTRODUCTION TO MACHINE LEARNING, 00000000
+JAVA PROGRAMMING AND SOFTWARE ENGINEERING, 00000005
+OBJECT ORIENTED JAVA PROGRAMMING, 00000002
+WEB APPLICATIONS FOR EVERYBODY, 00000003
+\echo index data_curso_usuario_idx
+200105110000, 00000000, 68977208649
+200909031632, 00000002, 74408638683
+201209051420, 00000000, 12728898844
+\echo index categorias_primario_idx
+00000000, -1
+00000000, -1
+00000000, -1
+00000001, -1
+00000001, -1
+00000001, -1
+00000002, -1
+00000002, -1
+00000002, -1
+00000003, -1
+00000005, -1
+00000004, -1
+00000003, -1
+\echo index categorias_secundario_idx
+BANKING, 6
+COMPUTATIONAL THINKI, 12
+COMPUTER PROGRAMMING, 0
+DEVOPS TOOLS, 11
+EXPLORATORY DATA ANA, 5
+INTERNET OF THINGS, 7
+JAVASCRIPT, 1
+MACHINE LEARNING ALG, 8
+MICROSOFT AZURE, 3
+POSTGRESQL, 9
+SQL, 4
+STATISTICAL VISUALIZ, 2
+USER EXPERIENCE, 10
+\q
